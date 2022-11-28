@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+app-footer {
+	//color: white;
+	color: white;
+	app-footer-main * {
+		background-color: #424242;
+		color: grey;
+	}
+	app-footer-social * {
+		background-color: black;
+		color: white;
+	}
+	app-footer-site-info * {
+		background-color: #515151;
+	}
+}
