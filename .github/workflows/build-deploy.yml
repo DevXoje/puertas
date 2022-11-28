@@ -9,11 +9,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
-            - uses: actions/setup-node@v1
+              uses: actions/checkout@v2.5.0
+            - name: Set up Node
+              uses: actions/setup-node@v3.5.1
               with:
-                  node-version: "10.x"
-            - uses: actions/cache@v1
+                  node-version: 16
+            - name: Save cache
+              uses: actions/cache@v1
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -28,4 +30,4 @@ jobs:
               with:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   BRANCH: gh-pages
-                  FOLDER: dist/workshop
+                  FOLDER: dist
