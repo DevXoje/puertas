@@ -1,0 +1,12 @@
+<mat-grid-list cols="2" rowHeight="100%">
+	<mat-grid-tile *ngFor="let item of content">
+		<mat-card>
+			<img mat-card-image [src]="item.img.src" [alt]="item.img.alt" />
+			<mat-card-content>
+				<p>
+					<strong>{{ item.text }}</strong>
+				</p>
+			</mat-card-content>
+		</mat-card>
+	</mat-grid-tile>
+</mat-grid-list>
