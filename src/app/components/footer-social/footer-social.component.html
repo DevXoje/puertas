@@ -5,17 +5,16 @@
 			target="_blank"
 			href="https://www.facebook.com/carlos.h.aparicio.3"
 			title="Facebook"
-			><i class="fa fa-facebook"></i></a
-		><a
+			*ngFor="let item of socialMedias"
+		>
+			<fa-icon [icon]="item.icon"></fa-icon>
+		</a>
+		<!-- <a
 			target="_blank"
 			href="https://www.facebook.com/carlos.h.aparicio.3"
 			title="instagram"
-			><i class="fa fa-instagram"></i></a
-		><a
-			target="_blank"
-			href="https://www.facebook.com/carlos.h.aparicio.3"
-			title="whatsapp"
-			><i class="fa fa-whatsapp"></i
-		></a>
+			>
+			<i class="fa fa-instagram"></i>
+		</a> -->
 	</div>
 </div>

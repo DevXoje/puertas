@@ -1,7 +1,7 @@
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
-	<mat-card class="shipping-card">
+	<mat-card>
 		<mat-card-header>
-			<mat-card-title>Shipping Information</mat-card-title>
+			<mat-card-title>Contact Information</mat-card-title>
 		</mat-card-header>
 		<mat-card-content>
 			<div class="row" *ngFor="let item of inputs">
@@ -11,14 +11,14 @@
 							<textarea
 								matInput
 								[placeholder]="item.placeholder"
-								formControlName="address"
+								[formControlName]="item.name"
 							></textarea>
 						</div>
 						<ng-template #elseBlock
 							><input
 								matInput
 								[placeholder]="item.placeholder"
-								formControlName="firstName"
+								[formControlName]="item.name"
 						/></ng-template>
 
 						<mat-error
@@ -31,42 +31,6 @@
 							First name is <strong>required</strong>
 						</mat-error>
 					</mat-form-field>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<mat-form-field class="full-width">
-						<textarea
-							matInput
-							placeholder="Address"
-							formControlName="address"
-						></textarea>
-						<mat-error
-							*ngIf="
-								addressForm.controls['message'].hasError(
-									'required'
-								)
-							"
-						>
-							Address is <strong>required</strong>
-						</mat-error>
-					</mat-form-field>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col">
-					<mat-radio-group formControlName="shipping">
-						<mat-radio-button value="free"
-							>Free Shipping</mat-radio-button
-						>
-						<mat-radio-button value="priority"
-							>Priority Shipping</mat-radio-button
-						>
-						<mat-radio-button value="nextday"
-							>Next Day Shipping</mat-radio-button
-						>
-					</mat-radio-group>
 				</div>
 			</div>
 		</mat-card-content>

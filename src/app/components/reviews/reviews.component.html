@@ -8,10 +8,18 @@
 		y ventanas.
 	</p>
 </header>
-<div>
+<div style="display: flex; flex-flow: row wrap; justify-content: space-around">
 	<a [href]="item.src" [title]="item.alt" *ngFor="let item of content">
-		<img [src]="item.src" [alt]="item.alt" width="100px" />
+		<mat-card class="mat-elevation-z4">
+			<img
+				mat-card-image
+				[src]="item.src"
+				[alt]="item.alt"
+				width="100px"
+			/>
+		</mat-card>
 	</a>
+
 	<!-- <a
 		href="https://puertasch.com/wp-content/uploads/2021/10/Puerta-interna-nogal-modelo-84003.jpeg"
 		class="g-item"

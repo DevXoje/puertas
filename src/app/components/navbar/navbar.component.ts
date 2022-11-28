@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatAccordion } from '@angular/material/expansion';
+
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -28,4 +30,5 @@ export class NavbarComponent {
 	}
 
 	constructor(private breakpointObserver: BreakpointObserver) {}
+	@ViewChild(MatAccordion) accordion?: MatAccordion;
 }

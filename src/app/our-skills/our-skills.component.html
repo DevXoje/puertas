@@ -1,0 +1,15 @@
+<mat-card *ngFor="let item of content" appearance="outlined" style="width: 25%;" class="card">
+	<mat-card-header>
+		<mat-card-title>
+			<fa-icon [icon]="item.icon"></fa-icon>
+			<h3 class="title">{{ item.title }}</h3>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content
+		>Fabricación de ventanas, armarios, puertas macizas, lacadas,
+		aglomeradas en diferentes materiales.
+	</mat-card-content>
+	<mat-card-actions>
+		<a href="#"> <mat-icon>east</mat-icon> </a>
+	</mat-card-actions>
+</mat-card>
