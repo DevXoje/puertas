@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhoIAmComponent } from './who-iam.component';
+import { FooterMainComponent } from './footer-main.component';
 
-describe('WhoIAmComponent', () => {
-	let component: WhoIAmComponent;
-	let fixture: ComponentFixture<WhoIAmComponent>;
+describe('FooterMainComponent', () => {
+	let component: FooterMainComponent;
+	let fixture: ComponentFixture<FooterMainComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [WhoIAmComponent],
+			declarations: [FooterMainComponent],
 		}).compileComponents();
 
-		fixture = TestBed.createComponent(WhoIAmComponent);
+		fixture = TestBed.createComponent(FooterMainComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});

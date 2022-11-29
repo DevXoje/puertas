@@ -9,9 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { FooterMainComponent } from './components/footer-main/footer-main.component';
-import { FooterSiteInfoComponent } from './components/footer-site-info/footer-site-info.component';
-import { FooterSocialComponent } from './components/footer-social/footer-social.component';
+import { FooterMainComponent } from './containers/footer/footer-main/footer-main.component';
+import { FooterSiteInfoComponent } from './containers/footer/footer-site-info/footer-site-info.component';
+import { FooterSocialComponent } from './containers/footer/footer-social/footer-social.component';
 import { HeroParallaxComponent } from './components/hero-parallax/hero-parallax.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
@@ -40,53 +40,57 @@ import { HomeModule } from './pages/home/home.module';
 import { OurInfoModule } from './pages/our-info/our-info.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { CatalogueModule } from './pages/catalogue/catalogue.module';
+import { ErrorComponent } from './components/error.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		NavbarComponent,
-		ContactFormComponent,
-		HomeComponent,
-		LayoutComponent,
-		FooterComponent,
-		HeroParallaxComponent,
-		WhoIAmComponent,
-		ReviewsComponent,
-		CallToActionComponent,
-		WhoIAmDescriptionComponent,
-		WhoIAmServicesComponent,
-		FooterSocialComponent,
-		FooterSiteInfoComponent,
-		FooterMainComponent,
-		EmpresaComponent,
-		BreadcumbsComponent,
-		HeroComponent,
-		OurInfoComponent,
-		OurProductsComponent,
-		OurSkillsComponent,
-		OurContactComponent,
-		OurSocialMediaComponent,
-		ContactComponent,
-		WhereWeAreComponent,
-		DoubtsFormComponent,
-		CallToContactComponent,
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		LayoutModule,
-		MaterialModule,
-		ReactiveFormsModule,
-		FontAwesomeModule,
-		CoreModule,
-		SharedModule,
-		HomeModule,
-		OurInfoModule,
-		ContactModule,
-		CatalogueModule,
-	],
-	providers: [],
-	bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    ContactFormComponent,
+    HomeComponent,
+    LayoutComponent,
+    FooterComponent,
+    HeroParallaxComponent,
+    WhoIAmComponent,
+    ReviewsComponent,
+    CallToActionComponent,
+    WhoIAmDescriptionComponent,
+    WhoIAmServicesComponent,
+    FooterSocialComponent,
+    FooterSiteInfoComponent,
+    FooterMainComponent,
+    EmpresaComponent,
+    BreadcumbsComponent,
+    HeroComponent,
+    OurInfoComponent,
+    OurProductsComponent,
+    OurSkillsComponent,
+    OurContactComponent,
+    OurSocialMediaComponent,
+    ContactComponent,
+    WhereWeAreComponent,
+    DoubtsFormComponent,
+    CallToContactComponent,
+    ErrorComponent,
+    PrivacyPolicyComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    LayoutModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    CoreModule,
+    SharedModule,
+    HomeModule,
+    OurInfoModule,
+    ContactModule,
+    CatalogueModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

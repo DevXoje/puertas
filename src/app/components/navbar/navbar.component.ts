@@ -21,7 +21,7 @@ export class NavbarComponent {
 
 	@HostListener('window:scroll', ['$event'])
 	onWindowScroll() {
-		let element = document.querySelector('mat-toolbar') as HTMLElement;
+		const element = document.querySelector('mat-toolbar') as HTMLElement;
 		if (window.scrollY > element.clientHeight) {
 			element.classList.add('navbar-inverse');
 		} else {
