@@ -8,7 +8,8 @@
 		"deploy:gh": "ng deploy --base-href=https://devxoje.github.io/puertas/",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-		"lint": "ng lint"
+		"lint": "ng lint --fix",
+		"format": "prettier --write"
 	},
 	"private": true,
 	"dependencies": {
