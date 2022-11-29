@@ -8,13 +8,25 @@ import { FooterSocialComponent } from './components/footer/footer-social/footer-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LayoutComponent } from './layout/layout.component';
-const declarables = [FooterComponent, NavbarComponent, LayoutComponent];
+import { LayoutBreadcrumbsComponent } from './layout/layout-breadcrumbs/layout-breadcrumbs.component';
+import { BreadcrumbsComponent } from './components/breadcumbs/breadcrumbs.component';
+import { OurSocialMediaComponent } from './components/our-social-media/our-social-media.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+const declarables = [
+  FooterComponent,
+  NavbarComponent,
+  LayoutComponent,
+  LayoutBreadcrumbsComponent,
+  OurSocialMediaComponent,
+  ContactFormComponent,
+];
 @NgModule({
   declarations: [
     ...declarables,
     FooterSocialComponent,
     FooterSiteInfoComponent,
     FooterMainComponent,
+    BreadcrumbsComponent,
   ],
   imports: [CommonModule, MaterialModule, FontAwesomeModule],
   exports: [declarables],

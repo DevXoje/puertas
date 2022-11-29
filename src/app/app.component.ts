@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <!--  <app-loader></app-loader> -->
-    <app-layout>
+    <app-layout-breadcrumbs>
       <router-outlet></router-outlet>
-    </app-layout>
+    </app-layout-breadcrumbs>
 
     <!--<app-cookie-consent></app-cookie-consent>-->
   `,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Input } from '../../core/model/input';
+import { Input } from '../../../core/model/input';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',

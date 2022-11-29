@@ -1,7 +1,7 @@
-import { Route } from '@angular/router';
-import { ErrorComponent } from './components/error.component';
+import { Route, RouterModule } from '@angular/router';
+import { ErrorComponent } from './core/components/error.component';
 import { HomeComponent } from './pages/home/home/home.component';
-import { PrivacyPolicyComponent } from './components/privacy-policy.component';
+import { PrivacyPolicyComponent } from './core/components/privacy-policy.component';
 import { EmpresaComponent } from './pages/our-info/our-info/empresa.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';
 
@@ -38,5 +38,4 @@ const appRoutes: Route[] = [
   },
 ];
 
-export const APP_ROUTES = appRoutes;
-//export const APP_ROUTES = RouterModule.forRoot(appRoutes);
+export const APP_ROUTES = RouterModule.forRoot(appRoutes);
