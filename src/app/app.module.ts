@@ -9,9 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { FooterMainComponent } from './components/footer-main/footer-main.component';
-import { FooterSiteInfoComponent } from './components/footer-site-info/footer-site-info.component';
-import { FooterSocialComponent } from './components/footer-social/footer-social.component';
+import { FooterMainComponent } from './containers/footer/footer-main/footer-main.component';
+import { FooterSiteInfoComponent } from './containers/footer/footer-site-info/footer-site-info.component';
+import { FooterSocialComponent } from './containers/footer/footer-social/footer-social.component';
 import { HeroParallaxComponent } from './components/hero-parallax/hero-parallax.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
@@ -34,6 +34,8 @@ import { ContactComponent } from './contact/contact.component';
 import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
 import { DoubtsFormComponent } from './doubts-form/doubts-form.component';
 import { CallToContactComponent } from './call-to-contact/call-to-contact.component';
+import { ErrorComponent } from './components/error.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy.component';
 
 @NgModule({
 	declarations: [
@@ -60,10 +62,12 @@ import { CallToContactComponent } from './call-to-contact/call-to-contact.compon
 		OurSkillsComponent,
 		OurContactComponent,
 		OurSocialMediaComponent,
-  ContactComponent,
-  WhereWeAreComponent,
-  DoubtsFormComponent,
-  CallToContactComponent,
+		ContactComponent,
+		WhereWeAreComponent,
+		DoubtsFormComponent,
+		CallToContactComponent,
+		ErrorComponent,
+		PrivacyPolicyComponent,
 	],
 	imports: [
 		BrowserModule,

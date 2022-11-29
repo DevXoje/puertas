@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { faHandDots,faCartFlatbedSuitcase,faDoorClosed } from '@fortawesome/free-solid-svg-icons';
+import {
+	faHandDots,
+	faCartFlatbedSuitcase,
+	faDoorClosed,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-our-skills',
@@ -19,7 +23,8 @@ export class OurSkillsComponent {
 			title: 'Transporte',
 			description: `Transporte Por tu comodidad te llevamos a tu destino nuestros productos en un "pis pas"`,
 		},
-		{/* <i class="fa-solid fa-cart-flatbed-suitcase"></i> */
+		{
+			/* <i class="fa-solid fa-cart-flatbed-suitcase"></i> */
 			icon: faDoorClosed,
 			title: 'Instalación',
 			description:
