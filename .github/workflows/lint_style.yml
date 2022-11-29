@@ -6,13 +6,14 @@ jobs:
         name: Prettier
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v1
-            - uses: bahmutov/npm-install@v1
+            -   name: Checkout
+                uses: actions/checkout@v2.5.0
 
-            - run: npm run format
-            - run: git status
-            # commit any changed files
-            # https://github.com/mikeal/publish-to-github-action
-            - uses: mikeal/publish-to-github-action@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            -   name: NPM or Yarn install with caching
+                uses: bahmutov/npm-install@v1.6.0
+
+            -   name: Prettify code
+                    uses: creyD/prettier_action@v4.2
+                    with:
+                        # This part is also where you can pass other options, for example:
+                        prettier_options: --write **/*.{js,md}
