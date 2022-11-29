@@ -11,10 +11,21 @@ const appRoutes: Route[] = [
     redirectTo: '/home',
     pathMatch: 'full',
   },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'catalogue',
+    loadChildren: () =>
+      import('./pages/catalogue/catalogue.module').then(m => m.CatalogueModule),
+  },
   /*	{
 		path: '',
 		component: HomeComponent,
 	},*/
+
   {
     path: 'empresa',
     component: EmpresaComponent,

@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { CatalogueRoutingModule } from './catalogue-routing.module';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { MaterialModule } from '../../material.module';
 
 @NgModule({
   declarations: [CatalogueComponent],
-  imports: [CommonModule, CatalogueRoutingModule],
+  imports: [CommonModule, CatalogueRoutingModule, MaterialModule],
 })
 export class CatalogueModule {}
