@@ -16,23 +16,21 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCardModule,
 } from '@angular/material'; */
 const materialModules = [
-	MatToolbarModule,
-	MatButtonModule,
-	MatSidenavModule,
-	MatIconModule,
-	MatListModule,
-	MatInputModule,
-	MatSelectModule,
-	MatRadioModule,
-	MatCardModule,
-	MatGridListModule,
-	MatExpansionModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatInputModule,
+  MatSelectModule,
+  MatRadioModule,
+  MatCardModule,
+  MatGridListModule,
+  MatExpansionModule,
 ];
 @NgModule({
-	declarations: [
-		/* ...components */
-	],
-	imports: [...materialModules, CommonModule],
-	exports: [...materialModules /* ...components */],
+  declarations: [],
+  imports: [...materialModules, CommonModule],
+  exports: [...materialModules],
 })
 export class MaterialModule {}

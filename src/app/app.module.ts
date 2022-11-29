@@ -7,33 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { FooterMainComponent } from './containers/footer/footer-main/footer-main.component';
-import { FooterSiteInfoComponent } from './containers/footer/footer-site-info/footer-site-info.component';
-import { FooterSocialComponent } from './containers/footer/footer-social/footer-social.component';
-import { HeroParallaxComponent } from './components/hero-parallax/hero-parallax.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { ReviewsComponent } from './components/reviews/reviews.component';
-import { WhoIAmDescriptionComponent } from './components/who-iam-description/who-iam-description.component';
-import { WhoIAmServicesComponent } from './components/who-iam-services/who-iam-services.component';
-import { FooterComponent } from './containers/footer/footer.component';
-import { HomeComponent } from './containers/home/home.component';
-import { LayoutComponent } from './containers/layout/layout.component';
-import { WhoIAmComponent } from './containers/who-iam/who-iam.component';
 import { MaterialModule } from './material.module';
-import { EmpresaComponent } from './empresa/empresa.component';
+import { EmpresaComponent } from './pages/our-info/our-info/empresa.component';
 import { BreadcumbsComponent } from './breadcumbs/breadcumbs.component';
-import { HeroComponent } from './hero/hero.component';
-import { OurInfoComponent } from './our-info/our-info.component';
-import { OurProductsComponent } from './our-products/our-products.component';
-import { OurSkillsComponent } from './our-skills/our-skills.component';
-import { OurContactComponent } from './our-contact/our-contact.component';
+import { HeroComponent } from './pages/our-info/components/hero/hero.component';
+import { OurInfoComponent } from './pages/our-info/components/our-info/our-info.component';
+import { OurProductsComponent } from './pages/our-info/components/our-products/our-products.component';
+import { OurSkillsComponent } from './pages/our-info/components/our-skills/our-skills.component';
+import { OurContactComponent } from './pages/our-info/components/our-contact/our-contact.component';
 import { OurSocialMediaComponent } from './our-social-media/our-social-media.component';
-import { ContactComponent } from './contact/contact.component';
-import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
-import { DoubtsFormComponent } from './doubts-form/doubts-form.component';
-import { CallToContactComponent } from './call-to-contact/call-to-contact.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './pages/home/home.module';
@@ -46,20 +29,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     ContactFormComponent,
-    HomeComponent,
-    LayoutComponent,
-    FooterComponent,
-    HeroParallaxComponent,
-    WhoIAmComponent,
-    ReviewsComponent,
-    CallToActionComponent,
-    WhoIAmDescriptionComponent,
-    WhoIAmServicesComponent,
-    FooterSocialComponent,
-    FooterSiteInfoComponent,
-    FooterMainComponent,
     EmpresaComponent,
     BreadcumbsComponent,
     HeroComponent,
@@ -68,10 +38,6 @@ import { PrivacyPolicyComponent } from './components/privacy-policy.component';
     OurSkillsComponent,
     OurContactComponent,
     OurSocialMediaComponent,
-    ContactComponent,
-    WhereWeAreComponent,
-    DoubtsFormComponent,
-    CallToContactComponent,
     ErrorComponent,
     PrivacyPolicyComponent,
   ],
