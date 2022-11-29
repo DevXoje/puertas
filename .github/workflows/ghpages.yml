@@ -15,9 +15,11 @@ jobs:
               with:
                   node-version: 10.x
 
-            - name: Prepare and deploy
+            - name: Prepare
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   npm install
-                  ng deploy --base-href=/puertas/ --name="DevXoje" --email=dawxoje@gmail.com --no-silent
+            - name: Deploy
+              run: |
+                  npm run deploy-ci-gh
