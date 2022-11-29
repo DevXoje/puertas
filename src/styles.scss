@@ -19,7 +19,7 @@ app-footer {
 		background-color: black;
 		color: white;
 	}
-	app-footer-site-info * {
+	app-footer-site-info  > * {
 		background-color: #515151;
 	}
 }
