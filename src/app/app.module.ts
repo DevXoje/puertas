@@ -34,6 +34,8 @@ import { ContactComponent } from './contact/contact.component';
 import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
 import { DoubtsFormComponent } from './doubts-form/doubts-form.component';
 import { CallToContactComponent } from './call-to-contact/call-to-contact.component';
+import { ErrorComponent } from './components/error.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy.component';
 
 @NgModule({
 	declarations: [
@@ -60,10 +62,12 @@ import { CallToContactComponent } from './call-to-contact/call-to-contact.compon
 		OurSkillsComponent,
 		OurContactComponent,
 		OurSocialMediaComponent,
-  ContactComponent,
-  WhereWeAreComponent,
-  DoubtsFormComponent,
-  CallToContactComponent,
+		ContactComponent,
+		WhereWeAreComponent,
+		DoubtsFormComponent,
+		CallToContactComponent,
+		ErrorComponent,
+		PrivacyPolicyComponent,
 	],
 	imports: [
 		BrowserModule,
