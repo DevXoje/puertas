@@ -6,6 +6,7 @@
 		"start": "ng serve",
 		"build": "ng build",
 		"deploy-gh": "ng deploy --base-href=https://devxoje.github.io/puertas/",
+		"deploy-ci-gh": "ng deploy --repo=https://devxoje.github.io/puertas.git --name=\"DevXoje\" --email=dawxoje@gmail.com\n",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"lint": "ng lint --fix",
