@@ -35,7 +35,7 @@ jobs:
             - name: Install Dependencies
               if: steps.cache-nodemodules.outputs.cache-hit != 'true'
               run: |
-                  npm i
+                  npm ci
             - name: Build
               run: |
-                  npm run build
+                  npm run deploy:gh
