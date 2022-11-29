@@ -38,4 +38,4 @@ jobs:
                   npm i
             - name: Build
               run: |
-                  npm run build -- --prod
+                  npm run build
