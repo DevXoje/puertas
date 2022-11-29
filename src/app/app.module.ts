@@ -34,6 +34,12 @@ import { ContactComponent } from './contact/contact.component';
 import { WhereWeAreComponent } from './where-we-are/where-we-are.component';
 import { DoubtsFormComponent } from './doubts-form/doubts-form.component';
 import { CallToContactComponent } from './call-to-contact/call-to-contact.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { HomeModule } from './pages/home/home.module';
+import { OurInfoModule } from './pages/our-info/our-info.module';
+import { ContactModule } from './pages/contact/contact.module';
+import { CatalogueModule } from './pages/catalogue/catalogue.module';
 
 @NgModule({
 	declarations: [
@@ -60,10 +66,10 @@ import { CallToContactComponent } from './call-to-contact/call-to-contact.compon
 		OurSkillsComponent,
 		OurContactComponent,
 		OurSocialMediaComponent,
-  ContactComponent,
-  WhereWeAreComponent,
-  DoubtsFormComponent,
-  CallToContactComponent,
+		ContactComponent,
+		WhereWeAreComponent,
+		DoubtsFormComponent,
+		CallToContactComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -73,6 +79,12 @@ import { CallToContactComponent } from './call-to-contact/call-to-contact.compon
 		MaterialModule,
 		ReactiveFormsModule,
 		FontAwesomeModule,
+		CoreModule,
+		SharedModule,
+		HomeModule,
+		OurInfoModule,
+		ContactModule,
+		CatalogueModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

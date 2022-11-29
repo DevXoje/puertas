@@ -8,8 +8,13 @@ import { ContactComponent } from './contact/contact.component';
 const appRoutes: Route[] = [
 	{
 		path: '',
-		component: HomeComponent,
+		redirectTo: '/home',
+		pathMatch: 'full',
 	},
+	/*	{
+		path: '',
+		component: HomeComponent,
+	},*/
 	{
 		path: 'empresa',
 		component: EmpresaComponent,
@@ -21,6 +26,11 @@ const appRoutes: Route[] = [
 	{
 		path: 'terms',
 		component: PrivacyPolicyComponent,
+	},
+	{
+		path: 'home',
+		loadChildren: () =>
+			import('./pages/home/home.module').then((m) => m.HomeModule),
 	},
 	{
 		path: '**',
