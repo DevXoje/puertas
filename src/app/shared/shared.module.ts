@@ -12,6 +12,7 @@ import { LayoutBreadcrumbsComponent } from './layout/layout-breadcrumbs/layout-b
 import { BreadcrumbsComponent } from './components/breadcumbs/breadcrumbs.component';
 import { OurSocialMediaComponent } from './components/our-social-media/our-social-media.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { WhatsappFixedComponent } from './components/whatsapp-fixed/whatsapp-fixed.component';
 const declarables = [
   FooterComponent,
   NavbarComponent,
@@ -27,6 +28,7 @@ const declarables = [
     FooterSiteInfoComponent,
     FooterMainComponent,
     BreadcrumbsComponent,
+    WhatsappFixedComponent,
   ],
   imports: [CommonModule, MaterialModule, FontAwesomeModule],
   exports: [declarables],

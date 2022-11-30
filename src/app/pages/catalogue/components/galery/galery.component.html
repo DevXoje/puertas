@@ -1,0 +1,12 @@
+<!-- TODO: titulo y galeria salen invertidos-->
+<ng-content></ng-content>
+<mat-grid-list
+	cols="3"
+	rowHeight="2:1"
+>
+	<mat-grid-tile *ngFor="let image of images">
+		<figure>
+			<img [src]="image.path" [alt]="image.alt">
+		</figure>
+	</mat-grid-tile>
+</mat-grid-list>

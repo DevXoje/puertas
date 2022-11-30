@@ -47,15 +47,20 @@
 	/>
 	<span class="example-spacer"></span>
 	<a href="">Home</a>
-
 	<mat-accordion class="example-headers-align" multi>
 		<mat-expansion-panel>
 			<mat-expansion-panel-header>
 				<mat-panel-description>
-					Nuestro catalogo
+					<a href="/catalogue" >Nuestro catalogo</a>
 				</mat-panel-description>
 			</mat-expansion-panel-header>
-			algo mas
+			<mat-panel-description>
+				<mat-list>
+						<mat-list-item *ngFor="let item of sections_catalogue">
+							<a [href]="item.path"					>{{item.name}}</a>
+						</mat-list-item>
+				</mat-list>
+			</mat-panel-description>
 		</mat-expansion-panel>
 	</mat-accordion>
 	<a href="/empresa">Empresa</a>
