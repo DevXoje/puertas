@@ -1,9 +1,9 @@
 import { Route, RouterModule } from '@angular/router';
 import { CatalogueComponent } from './catalogue/catalogue.component';
-import { PuertasEntradaExteriorComponent } from './components/puertas-entrada-exterior/puertas-entrada-exterior.component';
-import { PuertasInteriorComponent } from './components/puertas-interior/puertas-interior.component';
-import { TrabajadosEspecialesComponent } from './components/trabajados-especiales/trabajados-especiales.component';
-import { ArmariosVestidoresComponent } from './components/armarios-vestidores/armarios-vestidores.component';
+import { PuertasEntradaExteriorComponent } from './containers/puertas-entrada-exterior/puertas-entrada-exterior.component';
+import { PuertasInteriorComponent } from './containers/puertas-interior/puertas-interior.component';
+import { TrabajadosEspecialesComponent } from './containers/trabajados-especiales/trabajados-especiales.component';
+import { ArmariosVestidoresComponent } from './containers/armarios-vestidores/armarios-vestidores.component';
 
 const catalogueRoutes: Route[] = [
   {

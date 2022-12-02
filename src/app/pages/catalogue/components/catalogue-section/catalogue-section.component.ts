@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Catalogue_Section } from '@core/model/catalogue_section';
+import { Catalogue_Section } from '@core/models/catalogue_section';
 
 @Component({
   selector: 'app-catalogue-section',
