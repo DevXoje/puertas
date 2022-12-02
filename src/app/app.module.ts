@@ -20,6 +20,7 @@ import { HomeModule } from './pages/home/home.module';
 import { OurInfoModule } from './pages/our-info/our-info.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { CatalogueModule } from './pages/catalogue/catalogue.module';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CatalogueModule } from './pages/catalogue/catalogue.module';
     OurInfoModule,
     ContactModule,
     CatalogueModule,
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent],
