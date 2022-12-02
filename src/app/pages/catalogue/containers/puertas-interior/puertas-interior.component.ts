@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { Catalogue_Section } from '@core/model/catalogue_section';
+import { Catalogue_Section } from 'src/app/core/models/catalogue_section';
 
 @Component({
   selector: 'app-puertas-interior',
-  templateUrl: './puertas-interior.component.html',
-  styleUrls: ['./puertas-interior.component.scss'],
+  template: `
+    <app-catalogue-section [galleries]="[]"></app-catalogue-section>
+  `,
 })
 export class PuertasInteriorComponent {
   rusticas_exterior: Catalogue_Section = {
@@ -17,19 +18,40 @@ export class PuertasInteriorComponent {
         'Tenemos unos precios muy competitivos y económicos. Para más información llámenos y le ofreceremos el mejor servicio a su medida.',
       ],
     },
-    images: [{ path: 'https://via.placeholder.com/150', alt: 'algo' }],
+    images: [
+      {
+        path: 'https://via.placeholder.com/150',
+        alt: 'algo',
+        width: 150,
+        height: 150,
+      },
+    ],
   };
   rusticas_interior: Catalogue_Section = {
     header: {
       title: 'Puertas de Entrada rústicas de madera',
     },
-    images: [{ path: 'https://via.placeholder.com/150', alt: 'algo' }],
+    images: [
+      {
+        path: 'https://via.placeholder.com/150',
+        alt: 'algo',
+        width: 150,
+        height: 150,
+      },
+    ],
   };
 
   lacadas: Catalogue_Section = {
     header: {
       title: '',
     },
-    images: [{ path: 'https://via.placeholder.com/150', alt: 'algo' }],
+    images: [
+      {
+        path: 'https://via.placeholder.com/150',
+        alt: 'algo',
+        width: 150,
+        height: 150,
+      },
+    ],
   };
 }

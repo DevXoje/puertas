@@ -41,7 +41,8 @@
 				class="footer-widget widget widget_block widget_media_image"
 			>
 				<figure class="wp-block-image size-full">
-					<img
+					<!--<img
+
 						decoding="async"
 						loading="lazy"
 						width="274"
@@ -54,6 +55,13 @@
 							https://puertasch.com/wp-content/uploads/2021/11/Logo-Puertas-Carlos-Haro-Aparicio-mini-262x300.jpg 262w
 						"
 						sizes="(max-width: 274px) 100vw, 274px"
+					/>-->
+					<img
+					[ngSrc]="'https://puertasch.com/wp-content/uploads/2021/11/Logo-Puertas-Carlos-Haro-Aparicio-mini-262x300.jpg'"
+					[alt]="'logo'"
+					[width]="274"
+					[height]="314"
+					priority
 					/>
 				</figure>
 			</aside>

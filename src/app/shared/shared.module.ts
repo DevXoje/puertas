@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from '../material.module';
 import { FooterMainComponent } from './components/footer/footer-main/footer-main.component';
@@ -13,6 +13,8 @@ import { BreadcrumbsComponent } from './components/breadcumbs/breadcrumbs.compon
 import { OurSocialMediaComponent } from './components/our-social-media/our-social-media.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { WhatsappFixedComponent } from './components/whatsapp-fixed/whatsapp-fixed.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 const declarables = [
   FooterComponent,
   NavbarComponent,
@@ -30,7 +32,14 @@ const declarables = [
     BreadcrumbsComponent,
     WhatsappFixedComponent,
   ],
-  imports: [CommonModule, MaterialModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    FontAwesomeModule,
+    NgOptimizedImage,
+    ReactiveFormsModule,
+    RouterLink,
+  ],
   exports: [declarables],
 })
 export class SharedModule {}

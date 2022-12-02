@@ -13,6 +13,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 /* import {
     MatCardModule,
 } from '@angular/material'; */
@@ -29,6 +31,8 @@ const materialModules = [
   MatGridListModule,
   MatExpansionModule,
   MatTooltipModule,
+  MatCheckboxModule,
+  MatMenuModule,
 ];
 @NgModule({
   declarations: [],

@@ -18,7 +18,16 @@
 .example-spacer {
 	flex: 1 1 auto;
 }
+mat-toolbar{
+	position: absolute;
 
-.navbar-inverse {
-	background-color: red;
+}
+.navbar{
+	position: absolute;
+}
+.navbar__inverse {
+	background-color: red ;
+}
+.navbar__basic{
+	background-color: transparent ;
 }
