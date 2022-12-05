@@ -2,6 +2,8 @@ import { Component, HostListener, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { BRAND_LOGO } from '@core/models/static';
+import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-navbar',
@@ -46,12 +48,7 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  logo = {
-    path: 'https://puertasch.com/wp-content/uploads/2021/11/Logo-Puertas-Carlos-Haro-Aparicio-mini-1.jpg',
-    height: 100,
-    width: 87,
-    alt: 'algo',
-  };
+  logo: Image = BRAND_LOGO;
   sections_catalogue = [
     {
       name: 'puertas de entrada',

@@ -8,6 +8,7 @@ import { DoubtsFormComponent } from './components/doubts-form/doubts-form.compon
 import { WhereWeAreComponent } from './components/where-we-are/where-we-are.component';
 import { MaterialModule } from '../../material.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DoubtsFormComponent,
     WhereWeAreComponent,
   ],
-  imports: [CommonModule, ContactRoutingModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    ContactRoutingModule,
+    FontAwesomeModule,
+    SharedModule,
+  ],
 })
 export class ContactModule {}

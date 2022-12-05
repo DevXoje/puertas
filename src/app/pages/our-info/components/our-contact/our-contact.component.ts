@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-our-contact',
@@ -6,23 +7,12 @@ import { Component } from '@angular/core';
       Si busca algo y no lo encuentra, no lo dude, póngase en contacto con
       nosotros porque también hacemos trabajos a medida.
     </p>
-    <figure class="aligncenter size-large is-resized">
+    <figure>
       <img
-        decoding="async"
-        loading="lazy"
-        src="https://puertasch.com/wp-content/uploads/2021/12/Horario2_-878x1024.jpg"
-        alt=""
-        class="wp-image-437"
-        width="370"
-        height="431"
-        srcset="
-          https://puertasch.com/wp-content/uploads/2021/12/Horario2_-878x1024.jpg   878w,
-          https://puertasch.com/wp-content/uploads/2021/12/Horario2_-257x300.jpg    257w,
-          https://puertasch.com/wp-content/uploads/2021/12/Horario2_-768x896.jpg    768w,
-          https://puertasch.com/wp-content/uploads/2021/12/Horario2_-1317x1536.jpg 1317w,
-          https://puertasch.com/wp-content/uploads/2021/12/Horario2_.jpg           1425w
-        "
-        sizes="(max-width: 370px) 100vw, 370px" />
+        [ngSrc]="image.path"
+        [alt]="image.alt"
+        [width]="image.width"
+        [height]="image.height" />
     </figure>
     <p>
       En cualquier caso, le recomendamos que contacte con nosotros para así
@@ -31,7 +21,33 @@ import { Component } from '@angular/core';
     </p>
 
     <hr />
-    <blockquote>telefono de contacto 607 85 14 49</blockquote>
-    <button mat-button>contacto</button> `,
+    <blockquote class="blockquote">
+      <p>telefono de contacto</p>
+      <p>607 85 14 49</p>
+    </blockquote>
+    <a mat-fab extended [routerLink]="['/contact']">contacto</a> `,
+  styles: [
+    `
+      .blockquote {
+        font-size: 1.4em;
+        margin: 50px auto;
+        //font-family:Open Sans;
+        font-style: italic;
+        color: #999999;
+        padding: 1.2em 30px;
+        border-left: 3px solid #03c4eb;
+        line-height: 1;
+        position: relative;
+        background: #ededed;
+      }
+    `,
+  ],
 })
-export class OurContactComponent {}
+export class OurContactComponent {
+  image: Image = {
+    path: 'https://puertasch.com/wp-content/uploads/2021/12/Horario2_-878x1024.jpg',
+    alt: 'algo',
+    height: 431,
+    width: 370,
+  };
+}

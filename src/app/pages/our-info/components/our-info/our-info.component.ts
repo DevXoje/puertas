@@ -1,37 +1,35 @@
 import { Component } from '@angular/core';
+import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-our-info',
-  template: `<h2 id="sobre-nuestra-empresa">Sobre nuestra empresa</h2>
+  template: `
+    <app-section>
+      <h2 id="sobre-nuestra-empresa" class="header">Sobre nuestra empresa</h2>
+      <figure class="left-place">
+        <img
+          [ngSrc]="image.path"
+          [alt]="image.alt"
+          [width]="image.width"
+          [height]="image.height" />
+      </figure>
+      <div class="right-place">
+        <p *ngFor="let item of content" [innerHTML]="item"></p>
 
-    <figure class="alignleft size-large is-resized">
-      <img
-        decoding="async"
-        loading="lazy"
-        src="https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56-768x1024.jpeg"
-        alt=""
-        class="wp-image-85"
-        width="297"
-        height="396"
-        srcset="
-          https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56-768x1024.jpeg  768w,
-          https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56-225x300.jpeg   225w,
-          https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56.jpeg          1128w
-        "
-        sizes="(max-width: 297px) 100vw, 297px" />
-    </figure>
-
-    <p *ngFor="let item of content" [innerHTML]="item"></p>
-
-    <button mat-raised-button color="primary">
-      <a
-        class="wp-block-button__link"
-        href="https://puertasch.com/catalogo-de-puertas-y-armarios/"
-        >Catálogo de productos</a
-      >
-    </button> `,
+        <a mat-fab extended color="primary" [routerLink]="['/catalogue']"
+          >Catálogo de productos</a
+        >
+      </div>
+    </app-section>
+  `,
 })
 export class OurInfoComponent {
+  image: Image = {
+    path: 'https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56-768x1024.jpeg',
+    alt: 'algo',
+    width: 297,
+    height: 396,
+  };
   content = [
     `Te damos la bienvenida a nuestra web donde podrás encontrar todo lo que
 		buscas.`,

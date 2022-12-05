@@ -15,6 +15,8 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { WhatsappFixedComponent } from './components/whatsapp-fixed/whatsapp-fixed.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { SectionComponent } from './components/section/section.component';
+import { HeroComponent } from '@shared/components/hero/hero.component';
 const declarables = [
   FooterComponent,
   NavbarComponent,
@@ -22,6 +24,8 @@ const declarables = [
   LayoutBreadcrumbsComponent,
   OurSocialMediaComponent,
   ContactFormComponent,
+  SectionComponent,
+  HeroComponent,
 ];
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ const declarables = [
     FooterMainComponent,
     BreadcrumbsComponent,
     WhatsappFixedComponent,
+    SectionComponent,
   ],
   imports: [
     CommonModule,

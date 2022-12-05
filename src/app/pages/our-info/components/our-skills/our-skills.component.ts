@@ -8,27 +8,27 @@ import {
 @Component({
   selector: 'app-our-skills',
   template: `
-    <mat-card
-      *ngFor="let item of content"
-      appearance="outlined"
-      style="width: 25%"
-      class="card">
-      <mat-card-header>
-        <mat-card-title>
-          <fa-icon [icon]="item.icon"></fa-icon>
-          <h3 class="title">{{ item.title }}</h3>
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content
-        >Fabricación de ventanas, armarios, puertas macizas, lacadas,
-        aglomeradas en diferentes materiales.
-      </mat-card-content>
-      <mat-card-actions>
-        <a href="#">
-          <mat-icon>east</mat-icon>
-        </a>
-      </mat-card-actions>
-    </mat-card>
+    <mat-grid-list cols="3" rowHeight="300px">
+      <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let item of content">
+        <mat-card appearance="outlined" class="card">
+          <mat-card-header>
+            <mat-card-title>
+              <fa-icon [icon]="item.icon"></fa-icon>
+              <h3 class="title">{{ item.title }}</h3>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content
+            >Fabricación de ventanas, armarios, puertas macizas, lacadas,
+            aglomeradas en diferentes materiales.
+          </mat-card-content>
+          <mat-card-actions>
+            <a href="#">
+              <mat-icon>east</mat-icon>
+            </a>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
   `,
   styles: [
     `
