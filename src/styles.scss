@@ -8,24 +8,22 @@ body {
 	margin: 0;
 	font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-app-footer {
-	//color: white;
-	color: white;
-	app-footer-main * {
-		background-color: #424242;
-		color: grey;
-	}
-	app-footer-social * {
-		background-color: black;
-		color: white;
-	}
-	app-footer-site-info > * {
-		background-color: #515151;
-	}
+ul{
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
 }
 
 app-catalogue{
 	text-align: center;
 }
-app-reviews {
+.logo_side{
+	.mat-grid-tile-content{
+		flex-direction: column;
+	}
 }

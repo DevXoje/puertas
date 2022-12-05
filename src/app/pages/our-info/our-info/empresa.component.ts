@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
     <app-our-skills></app-our-skills>
     <hr />
     <app-our-contact></app-our-contact>
-    <app-our-social-media [title]="socialMediaTitle"></app-our-social-media>
+    <app-our-social-media
+      [title]="socialMediaTitle"
+      [hasIconsLarge]="true"></app-our-social-media>
   `,
 })
 export class EmpresaComponent {

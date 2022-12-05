@@ -13,8 +13,13 @@ import { BreadcrumbsComponent } from './components/breadcumbs/breadcrumbs.compon
 import { OurSocialMediaComponent } from './components/our-social-media/our-social-media.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { WhatsappFixedComponent } from './components/whatsapp-fixed/whatsapp-fixed.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { SectionComponent } from './components/section/section.component';
+import { HeroComponent } from '@shared/components/hero/hero.component';
+import { MapsComponent } from './components/maps/maps.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { HttpClientModule } from '@angular/common/http';
 const declarables = [
   FooterComponent,
   NavbarComponent,
@@ -22,6 +27,9 @@ const declarables = [
   LayoutBreadcrumbsComponent,
   OurSocialMediaComponent,
   ContactFormComponent,
+  SectionComponent,
+  HeroComponent,
+  MapsComponent,
 ];
 @NgModule({
   declarations: [
@@ -31,6 +39,8 @@ const declarables = [
     FooterMainComponent,
     BreadcrumbsComponent,
     WhatsappFixedComponent,
+    SectionComponent,
+    MapsComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +49,9 @@ const declarables = [
     NgOptimizedImage,
     ReactiveFormsModule,
     RouterLink,
+    GoogleMapsModule,
+    HttpClientModule,
+    FormsModule,
   ],
   exports: [declarables],
 })

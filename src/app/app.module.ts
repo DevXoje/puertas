@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { EmpresaComponent } from './pages/our-info/our-info/empresa.component';
-import { HeroComponent } from './pages/our-info/components/hero/hero.component';
 import { OurInfoComponent } from './pages/our-info/components/our-info/our-info.component';
 import { OurProductsComponent } from './pages/our-info/components/our-products/our-products.component';
 import { OurSkillsComponent } from './pages/our-info/components/our-skills/our-skills.component';
@@ -26,7 +25,6 @@ import { NgOptimizedImage } from '@angular/common';
   declarations: [
     AppComponent,
     EmpresaComponent,
-    HeroComponent,
     OurInfoComponent,
     OurProductsComponent,
     OurSkillsComponent,

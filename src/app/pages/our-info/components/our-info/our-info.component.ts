@@ -3,27 +3,32 @@ import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-our-info',
-  template: `<h2 id="sobre-nuestra-empresa">Sobre nuestra empresa</h2>
+  template: `
+    <app-section>
+      <h2 class="header" id="sobre-nuestra-empresa">Sobre nuestra empresa</h2>
+      <figure class="left-place">
+        <img
+          [alt]="image.alt"
+          [height]="image.height"
+          [ngSrc]="image.path"
+          [width]="image.width" />
+      </figure>
+      <div class="right-place">
+        <p *ngFor="let item of content" [innerHTML]="item"></p>
 
-    <figure>
-      <img
-        [ngSrc]="img.path"
-        [alt]="img.alt"
-        [width]="img.width"
-        [height]="img.height" />
-    </figure>
-
-    <p *ngFor="let item of content" [innerHTML]="item"></p>
-    <a mat-raised-button color="primary" [routerLink]="['/catalogue']"
-      >Catálogo de productos</a
-    > `,
+        <a [routerLink]="['/catalogue']" color="primary" mat-raised-button>
+          Catálogo de productos
+        </a>
+      </div>
+    </app-section>
+  `,
 })
 export class OurInfoComponent {
-  img: Image = {
-    alt: '',
-    height: 396,
-    width: 297,
+  image: Image = {
     path: 'https://puertasch.com/wp-content/uploads/2021/06/2021-05-25-14.05.56-768x1024.jpeg',
+    alt: 'algo',
+    width: 297,
+    height: 396,
   };
   content = [
     `Te damos la bienvenida a nuestra web donde podrás encontrar todo lo que
