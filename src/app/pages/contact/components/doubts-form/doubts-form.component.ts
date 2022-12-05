@@ -13,8 +13,11 @@ import { Component } from '@angular/core';
         Preferimos el contacto mediante llamada telefónica debido a que no
         siempre estamos pendientes del correo electrónico.
       </p>
-      <!--<app-contact-form></app-contact-form>-->
-      <img src="" alt="algo" />
+      <app-contact-form></app-contact-form>
+      <img
+        src="https://puertasch.com/wp-content/uploads/2021/11/Fachada-1024x768.jpg"
+        alt="algo"
+        style="width: 80%;" />
       <p>
         Siempre tenemos nuestro móvil a mano. Si no te atendemos en el momento
         es que estamos trabajando duro, no te preocupes, te llamamos nosotros en

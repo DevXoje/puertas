@@ -7,22 +7,15 @@ import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-navbar',
-  template: ` <mat-toolbar color="primary" class="navbar navbar__basic">
-      <img
+  template: `
+    <mat-toolbar color="primary" class="navbar navbar__basic">
+      <!--<img
         [width]="logo.width"
         [height]="logo.height"
         [ngSrc]="logo.path"
-        [alt]="logo.alt" />
+        [alt]="logo.alt" />-->
       <span class="example-spacer"></span>
       <a href="">Home</a>
-      <!-- <button
-        mat-button
-        [matMenuTriggerFor]="menu"
-        (mouseenter)="openMenu()"
-        (mouseleave)="closeMenu()"
-        #clickHoverMenuTrigger="matMenuTrigger">
-        <a href="/catalogue">Nuestro catalogo</a>
-      </button>-->
       <button
         mat-button
         [matMenuTriggerFor]="menu"
@@ -44,8 +37,42 @@ import { Image } from '@core/models/image';
         <mat-icon>menu</mat-icon>
       </button>
     </mat-toolbar>
-    <ng-content></ng-content>`,
-  styleUrls: ['./navbar.component.scss'],
+    <ng-content></ng-content>
+    algo
+  `,
+  styles: [
+    `
+      .sidenav .mat-toolbar {
+        background: inherit;
+      }
+
+      .mat-toolbar.mat-primary {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .example-spacer {
+        flex: 1 1 auto;
+      }
+
+      mat-toolbar {
+        position: absolute;
+      }
+
+      .navbar {
+        position: absolute;
+      }
+
+      .navbar__inverse {
+        background-color: red;
+      }
+
+      .navbar__basic {
+        background-color: transparent;
+      }
+    `,
+  ],
 })
 export class NavbarComponent {
   logo: Image = BRAND_LOGO;

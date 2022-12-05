@@ -1,59 +1,40 @@
-comentado
-<!--
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
 	<mat-card>
 		<mat-card-header>
 			<mat-card-title>Contact Information</mat-card-title>
 		</mat-card-header>
 		<mat-card-content>
-			<div *ngFor="let item of inputs">
-					<mat-form-field class="full-width">
-						&lt;!&ndash;<div *ngIf="item.type === 'textarea'; else elseBlock">
-							<textarea
-								matInput
-								[placeholder]="item.placeholder"
-								[formControlName]="item.name"
-							></textarea>
-						</div>
-						<ng-template #elseBlock
-							><input
-								matInput
-								[placeholder]="item.placeholder"
-								[formControlName]="item.name"
-						/></ng-template>&ndash;&gt;
-						<div [ngSwitch]="item.type">
-							&lt;!&ndash; <input *ngSwitchCase="'textbox'" [formControlName]="field.key" [id]="field.key" [type]="field.type"> &ndash;&gt;
-
-							<textarea
-								matInput
-								[placeholder]="item.placeholder"
-								[formControlName]="item.name"
-								*ngSwitchCase="'textarea'"
-
-							></textarea>
-							<div *ngSwitchCase="'checkbox'">
-								<mat-checkbox [formControlName]="item.name"></mat-checkbox>
-							</div>
-
-
-							<input
-								matInput
-								*ngSwitchDefault
-								[placeholder]="item.placeholder"
-								[formControlName]="item.name"
-							/>
-						</div>
-						<mat-error
-							*ngIf="
+			<mat-form-field *ngFor="let item of inputs" [ngSwitch]="item.type" class="full-width">
+				<mat-label [innerHTML]="item.label"></mat-label>
+				<textarea
+					*ngSwitchCase="'textarea'"
+					[formControlName]="item.name"
+					[placeholder]="item.placeholder"
+					matInput>
+				</textarea>
+				<div *ngSwitchCase="'checkbox'">
+					<input [hidden]="true" matInput>
+					<mat-checkbox [formControlName]="item.name">
+					</mat-checkbox>
+				</div>
+				<!--<mat-checkbox
+					*ngSwitchCase="'checkbox1'"></mat-checkbox>-->
+				<input
+					*ngSwitchDefault
+					[formControlName]="item.name"
+					[placeholder]="item.placeholder"
+					matInput
+				/>
+				<mat-error
+					*ngIf="
 								addressForm.controls['name'].hasError(
 									'required'
 								)
 							"
-						>
-							First name is <strong>required</strong>
-						</mat-error>
-					</mat-form-field>
-			</div>
+				>
+					First name is <strong>required</strong>
+				</mat-error>
+			</mat-form-field>
 		</mat-card-content>
 		<mat-card-actions>
 			<button mat-raised-button color="primary" type="submit">
@@ -62,4 +43,3 @@ comentado
 		</mat-card-actions>
 	</mat-card>
 </form>
--->

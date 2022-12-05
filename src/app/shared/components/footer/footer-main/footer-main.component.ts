@@ -71,7 +71,7 @@ export class FooterMainComponent {
   logo: Image = {
     path: BRAND_LOGO.path,
     alt: BRAND_LOGO.alt,
-    width: 200,
+    width: 174,
     height: 200,
   };
 

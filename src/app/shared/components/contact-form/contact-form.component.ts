@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Input } from '../../../core/models/input';
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -51,19 +52,19 @@ export class ContactFormComponent {
     },
     {
       label: `He leído y acepto el
-			<a
-				target="_blank"
-				rel="nofollow noopener noreferrer"
-				href="https://puertasch.com/avisos-legales"
-				>Aviso Legal</a
-			>
-			y la
-			<a
-				target="_blank"
-				rel="nofollow noopener noreferrer"
-				href="https://puertasch.com/politica-de-privacidad"
-				>Política de Privacidad</a
-			>.`,
+			   <a
+				   target="_blank"
+				   rel="nofollow noopener noreferrer"
+				   href="https://puertasch.com/avisos-legales"
+				   >Aviso Legal</a
+			   >
+			   y la
+			   <a
+				   target="_blank"
+				   rel="nofollow noopener noreferrer"
+				   href="https://puertasch.com/politica-de-privacidad"
+				   >Política de Privacidad</a
+			   >.`,
       type: 'checkbox',
       name: 'acceptance_279',
       placeholder: 'algo',

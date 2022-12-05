@@ -5,6 +5,7 @@ import {
   faTelegram,
   faSkype,
 } from '@fortawesome/free-brands-svg-icons';
+import { SOCIAL_ICONS } from '@core/models/static';
 @Component({
   selector: 'app-our-social-media',
   template: `
@@ -77,6 +78,7 @@ export class OurSocialMediaComponent {
       link: '',
     },
   ];
+  ico = SOCIAL_ICONS;
   @Input() title = 'Redes sociales';
   @Input() hasIconsLarge = false;
 }

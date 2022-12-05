@@ -4,6 +4,7 @@ import {
   faInstagram,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
+import { SOCIAL_ICONS } from '@core/models/static';
 
 @Component({
   selector: 'app-footer-social',
@@ -13,9 +14,9 @@ import {
       <div class="social-media__icons">
         <a
           *ngFor="let item of socialMedias"
-          [routerLink]="[item.link]"
+          [routerLink]="[item.path]"
           target="_blank">
-          <fa-icon [icon]="item.icon"></fa-icon>
+          <fa-icon [icon]="item.content" class="icon"></fa-icon>
         </a>
       </div>
     </div>
@@ -31,27 +32,15 @@ import {
           font-size: 2em;
           display: flex;
           justify-content: space-around;
+
+          & .icon {
+            color: white;
+          }
         }
       }
     `,
   ],
 })
 export class FooterSocialComponent {
-  socialMedias = [
-    {
-      name: 'facebook',
-      link: 'https://www.facebook.com/carlos.h.aparicio.3',
-      icon: faFacebookF,
-    },
-    {
-      name: 'instagram',
-      link: 'https://www.facebook.com/carlos.h.aparicio.3',
-      icon: faInstagram,
-    },
-    {
-      name: 'whatsapp',
-      link: 'https://www.facebook.com/carlos.h.aparicio.3',
-      icon: faWhatsapp,
-    },
-  ];
+  socialMedias = SOCIAL_ICONS;
 }

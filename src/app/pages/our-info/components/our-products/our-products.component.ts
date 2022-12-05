@@ -13,7 +13,8 @@ import { Image } from '@core/models/image';
           [ngSrc]="image.path"
           [alt]="image.alt"
           [width]="image.width"
-          [height]="image.height" />
+          [height]="image.height"
+          priority />
       </figure>
       <div class="left-place">
         <p *ngFor="let item of content" [innerHTML]="item"></p>
@@ -26,8 +27,8 @@ export class OurProductsComponent {
   image: Image = {
     path: 'https://puertasch.com/wp-content/uploads/2021/06/rpscdbai.jpg-sz1200x1200-1024x835.jpg',
     alt: 'algo',
-    width: 297,
-    height: 396,
+    width: 1024,
+    height: 835,
   };
 
   content = [
