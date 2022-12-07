@@ -20,6 +20,9 @@ import { HeroComponent } from '@shared/components/hero/hero.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
+import { CookiesComponent } from './components/cookies/cookies.component';
+import { NgcCookieConsentModule } from 'ngx-cookieconsent';
+
 const declarables = [
   FooterComponent,
   NavbarComponent,
@@ -30,6 +33,7 @@ const declarables = [
   SectionComponent,
   HeroComponent,
   MapsComponent,
+  CookiesComponent,
 ];
 @NgModule({
   declarations: [
@@ -41,6 +45,7 @@ const declarables = [
     WhatsappFixedComponent,
     SectionComponent,
     MapsComponent,
+    CookiesComponent,
   ],
   imports: [
     CommonModule,
@@ -52,6 +57,7 @@ const declarables = [
     GoogleMapsModule,
     HttpClientModule,
     FormsModule,
+    NgcCookieConsentModule,
   ],
   exports: [declarables],
 })

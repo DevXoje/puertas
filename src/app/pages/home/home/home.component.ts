@@ -8,5 +8,19 @@ import { Component } from '@angular/core';
     <app-reviews></app-reviews>
     <app-call-to-action></app-call-to-action>
   `,
+  styles: [
+    `
+      /* app-hero-parallax {
+        position: absolute;
+        width: 95vw;
+        height: 100px;
+        top: -65px;
+        left: -10%;
+      }
+      app-who-iam {
+        margin-top: 100px;
+      }*/
+    `,
+  ],
 })
 export class HomeComponent {}

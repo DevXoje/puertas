@@ -9,36 +9,24 @@ import {
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  template: `
-    <!--  <app-loader></app-loader> -->
-    <app-layout-breadcrumbs>
-      <router-outlet></router-outlet>
-    </app-layout-breadcrumbs>
-    <app-cookies></app-cookies>
-  `,
+  selector: 'app-cookies',
+  templateUrl: './cookies.component.html',
+  styleUrls: ['./cookies.component.scss'],
 })
-export class AppComponent {
-  title = 'puertas';
-
+export class CookiesComponent {
   //keep refs to subscriptions to be able to unsubscribe later
-  /*private popupOpenSubscription!: Subscription;
+  private popupOpenSubscription!: Subscription;
   private popupCloseSubscription!: Subscription;
   private initializingSubscription!: Subscription;
   private initializedSubscription!: Subscription;
   private initializationErrorSubscription!: Subscription;
   private statusChangeSubscription!: Subscription;
   private revokeChoiceSubscription!: Subscription;
-  private noCookieLawSubscription!: Subscription;*/
+  private noCookieLawSubscription!: Subscription;
 
-  constructor(
-    private ccService: NgcCookieConsentService
-  ) //private cookie: CookieService
-  {}
+  constructor(private ccService: NgcCookieConsentService) {}
 
   ngOnInit() {
-    this.ccService.init(this.ccService.getConfig());
-    /*
     // subscribe to cookieconsent observables to react to main events
     this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(() => {
       // you can use this.ccService.getConfig() to do stuff...
@@ -87,10 +75,10 @@ export class AppComponent {
       (event: NgcNoCookieLawEvent) => {
         // you can use this.ccService.getConfig() to do stuff...
       }
-    );*/
+    );
   }
 
-  /*ngOnDestroy() {
+  ngOnDestroy() {
     // unsubscribe to cookieconsent observables to prevent memory leaks
     this.popupOpenSubscription.unsubscribe();
     this.popupCloseSubscription.unsubscribe();
@@ -100,5 +88,5 @@ export class AppComponent {
     this.statusChangeSubscription.unsubscribe();
     this.revokeChoiceSubscription.unsubscribe();
     this.noCookieLawSubscription.unsubscribe();
-  }*/
+  }
 }

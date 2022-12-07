@@ -15,7 +15,19 @@ import { faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
         size="3x"></fa-icon>
     </button>
   `,
-  styleUrls: ['./whatsapp-fixed.component.scss'],
+  styles: [
+    `
+      fa-icon {
+        color: rgb(37, 211, 102);
+      }
+
+      button {
+        position: fixed;
+        right: 0;
+        bottom: 50px;
+      }
+    `,
+  ],
 })
 export class WhatsappFixedComponent {
   whatsapp_icon = faWhatsappSquare;

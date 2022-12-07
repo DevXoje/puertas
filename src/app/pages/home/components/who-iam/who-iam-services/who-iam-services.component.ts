@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-who-iam-services',
-  template: ` <mat-grid-list cols="2" rowHeight="100%">
+  template: ` <mat-grid-list
+    (window:resize)="handleSize($event)"
+    [cols]="mybreakpoint"
+    rowHeight="4:0.5">
     <mat-grid-tile *ngFor="let item of content">
       <mat-card>
         <img
-          mat-card-image
-          [ngSrc]="item.img.src"
           [alt]="item.img.alt"
-          [width]="564"
           [height]="752"
+          [ngSrc]="item.img.src"
+          [width]="564"
+          mat-card-image
           priority />
         <mat-card-content>
           <p>
@@ -38,4 +41,17 @@ export class WhoIAmServicesComponent {
       text: 'Proveemos de todo tipo de puertas para el interior de tu hogar y tu negocio. Te aportamos la elegancia que necesites y el estilo que mejor encaja.',
     },
   ];
+  mybreakpoint!: number;
+
+  constructor() {}
+
+  ngOnInit() {
+    this.mybreakpoint = window.innerWidth <= 600 ? 1 : 6;
+    console.log(this.mybreakpoint);
+  }
+
+  handleSize(event: any) {
+    this.mybreakpoint = event.target.innerWidth <= 600 ? 1 : 6;
+    console.log(this.mybreakpoint);
+  }
 }

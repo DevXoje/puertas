@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
       <button mat-raised-button color="warn">
         <a href="/empresa-puertas-carlos-haro/">Sobre nuestra empresa</a>
       </button>
-    </div> `,
+    </div>
+    faltan 2 fotos`,
 })
 export class WhoIAmDescriptionComponent {
   content = [

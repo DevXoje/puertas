@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     `
       app-who-iam-description {
         text-align: center;
-        margin: 0px 50px;
+        margin: 0 50px;
       }
     `,
   ],
