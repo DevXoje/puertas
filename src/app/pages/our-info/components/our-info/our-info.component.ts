@@ -5,20 +5,20 @@ import { Image } from '@core/models/image';
   selector: 'app-our-info',
   template: `
     <app-section>
-      <h2 id="sobre-nuestra-empresa" class="header">Sobre nuestra empresa</h2>
+      <h2 class="header" id="sobre-nuestra-empresa">Sobre nuestra empresa</h2>
       <figure class="left-place">
         <img
-          [ngSrc]="image.path"
           [alt]="image.alt"
-          [width]="image.width"
-          [height]="image.height" />
+          [height]="image.height"
+          [ngSrc]="image.path"
+          [width]="image.width" />
       </figure>
       <div class="right-place">
         <p *ngFor="let item of content" [innerHTML]="item"></p>
 
-        <a mat-fab extended color="primary" [routerLink]="['/catalogue']"
-          >Catálogo de productos</a
-        >
+        <a [routerLink]="['/catalogue']" color="primary" mat-raised-button>
+          Catálogo de productos
+        </a>
       </div>
     </app-section>
   `,
