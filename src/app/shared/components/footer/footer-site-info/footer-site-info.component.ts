@@ -3,45 +3,41 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-footer-site-info',
   template: `
-    <div class="back-to-top__wrapper">
-      <a mat-flat-button class="back-to-top" href="#page" title="Volver arriba">
-        <mat-icon aria-label="Side nav toggle icon">
-          keyboard_double_arrow_up
-        </mat-icon>
-      </a>
-    </div>
-    <div class="footer__site-info">
-      <p>
-        <a href="https://puertasch.com/aviso-legal/">Aviso Legal</a>
-        |
-        <a href="https://puertasch.com/politica-de-privacidad/"
-          >Política de Privacidad
-        </a>
-        |
-        <a href="https://puertasch.com/politica-de-cookies/"
-          >Política de cookies</a
-        >
-        2021 Todos los derechos reservados.
-      </p>
-      <p>
-        Desarrollado por
-        <a href="">Luque&Vilches</a>
-      </p>
-      <p>
-        <!-- <a href="https://intelligentlife.es"
-					><img
-						class="alignnone"
-						style="width: 50px"
-						title="Intelligent Life"
-						src="https://puertasch.com/wp-content/uploads/2021/12/TamgrandeIntelligentLife.png"
-						alt=""
-						width="900"
-						height="900"
-				/></a> -->
+      <div class="back-to-top__wrapper">
+          <a mat-flat-button class="back-to-top" href="#page" title="Volver arriba">
+              <mat-icon aria-label="Side nav toggle icon">
+                  keyboard_double_arrow_up
+              </mat-icon>
+          </a>
+      </div>
+      <div class="footer__site-info">
+          <p>
+              <a href="https://puertasch.com/aviso-legal/">Aviso Legal</a>
+              |
+              <a href="https://puertasch.com/politica-de-privacidad/">Política de Privacidad</a>
+              |
+              <a href="https://puertasch.com/politica-de-cookies/">Política de cookies</a>
+              2021 Todos los derechos reservados.
+          </p>
+          <p>
+              Desarrollado por
+              <a href="">Luque&Vilches</a>
+          </p>
+          <p>
+              <!-- <a href="https://intelligentlife.es"
+                          ><img
+                              class="alignnone"
+                              style="width: 50px"
+                              title="Intelligent Life"
+                              src="https://puertasch.com/wp-content/uploads/2021/12/TamgrandeIntelligentLife.png"
+                              alt=""
+                              width="900"
+                              height="900"
+                      /></a> -->
 
-        Copyright © 2022 Puertas CH
-      </p>
-    </div>
+              Copyright © 2022 Puertas CH
+          </p>
+      </div>
   `,
   styles: [
     `
