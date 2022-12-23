@@ -10,9 +10,9 @@ import { Component } from '@angular/core';
       style="text-align: center">
       <mat-grid-tile>
         <div>
-          <h1>Puertas CARLOS HARO APARICIO</h1>
-          <p>
-            <strong
+          <h1 class="text-danger">Puertas CARLOS HARO APARICIO</h1>
+          <p class="text-secondary">
+            <strong class="text-secondary"
               >PUERTAS RÚSTICAS DE MADERA MACIZA EXTERIOR E INTERIOR. SUELOS
               LAMINADOS, TARIMAS FLOTANTES DE MADERA NATURAL, ARMARIOS
               EMPOTRADOS, VESTIDORES A MEDIDA, VENTANAS Y MUCHO MÁS.</strong
@@ -41,7 +41,7 @@ import { Component } from '@angular/core';
   styles: [
     `
       .parallax {
-        background-image: url('https://via.placeholder.com/150');
+        background-image: url('../../../../../assets/img/Fachada.jpg');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;

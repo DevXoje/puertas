@@ -32,10 +32,12 @@
 						"styles": [
 							"@angular/material/prebuilt-themes/indigo-pink.css",
 							"src/styles.scss",
-							"node_modules/cookieconsent/build/cookieconsent.min.css"
+							"node_modules/cookieconsent/build/cookieconsent.min.css",
+							"node_modules/bootstrap/dist/css/bootstrap.css"
 						],
 						"scripts": [
-							"node_modules/cookieconsent/build/cookieconsent.min.js"
+							"node_modules/cookieconsent/build/cookieconsent.min.js",
+							"node_modules/bootstrap/dist/js/bootstrap.js"
 						]
 					},
 					"configurations": {

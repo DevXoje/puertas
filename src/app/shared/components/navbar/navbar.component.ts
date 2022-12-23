@@ -65,7 +65,7 @@ import { Image } from '@core/models/image';
       }
 
       .navbar__inverse {
-        background-color: red;
+        background-color: white;
       }
 
       .navbar__basic {
