@@ -7,39 +7,7 @@ import { Image } from '@core/models/image';
 
 @Component({
   selector: 'app-navbar',
-  template: `
-    <mat-toolbar color="primary" class="navbar navbar__basic">
-      <!--<img
-        [width]="logo.width"
-        [height]="logo.height"
-        [ngSrc]="logo.path"
-        [alt]="logo.alt" />-->
-      <span class="example-spacer"></span>
-      <a href="">Home</a>
-      <button
-        mat-button
-        [matMenuTriggerFor]="menu"
-        #clickHoverMenuTrigger="matMenuTrigger">
-        <a [routerLink]="['/catalogue']">Nuestro catalogo</a>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let item of sections_catalogue">
-          <a [routerLink]="[item.path]">{{ item.name }}</a>
-        </button>
-      </mat-menu>
-      <a [routerLink]="['/empresa']">Empresa</a>
-      <a [routerLink]="['/contact']">Contacto</a>
-
-      <button
-        mat-icon-button
-        class="example-icon"
-        aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar>
-    <ng-content></ng-content>
-    algo
-  `,
+  templateUrl: 'navbar.component.html',
   styles: [
     `
       .sidenav .mat-toolbar {
@@ -66,6 +34,7 @@ import { Image } from '@core/models/image';
 
       .navbar__inverse {
         background-color: white;
+        transition: all 1.5s ease;
       }
 
       .navbar__basic {
