@@ -8,5 +8,5 @@
 
 ## Deploy
 
-- [GHPages](https://devxoje.github.io/puertas/home)
-- PaaS:
+-   [GHPages](https://devxoje.github.io/puertas/home)
+-   PaaS:
