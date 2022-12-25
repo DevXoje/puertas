@@ -20,40 +20,34 @@ import { OurInfoModule } from '@pages/our-info/our-info.module';
 import { ContactModule } from '@pages/contact/contact.module';
 import { CatalogueModule } from '@pages/catalogue/catalogue.module';
 import { NgOptimizedImage } from '@angular/common';
-import {
-  NgcCookieConsentConfig,
-  NgcCookieConsentModule,
-} from 'ngx-cookieconsent';
-import { COOKIECONFIG } from '@shared/components/cookies/cookieConfig';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    EmpresaComponent,
-    OurInfoComponent,
-    OurProductsComponent,
-    OurSkillsComponent,
-    OurContactComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    MaterialModule,
-    ReactiveFormsModule,
-    FontAwesomeModule,
-    CoreModule,
-    SharedModule,
-    HomeModule,
-    OurInfoModule,
-    ContactModule,
-    CatalogueModule,
-    NgOptimizedImage,
-    NgcCookieConsentModule.forRoot(COOKIECONFIG),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  exports: [],
+    declarations: [
+        AppComponent,
+        EmpresaComponent,
+        OurInfoComponent,
+        OurProductsComponent,
+        OurSkillsComponent,
+        OurContactComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        MaterialModule,
+        ReactiveFormsModule,
+        FontAwesomeModule,
+        CoreModule,
+        SharedModule,
+        HomeModule,
+        OurInfoModule,
+        ContactModule,
+        CatalogueModule,
+        NgOptimizedImage,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    exports: [],
 })
 export class AppModule {}

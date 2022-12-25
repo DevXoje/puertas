@@ -20,45 +20,38 @@ import { HeroComponent } from '@shared/components/hero/hero.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
-import { CookiesComponent } from './components/cookies/cookies.component';
 import { NgcCookieConsentModule } from 'ngx-cookieconsent';
 
 const declarables = [
-  FooterComponent,
-  NavbarComponent,
-  LayoutComponent,
-  LayoutBreadcrumbsComponent,
-  OurSocialMediaComponent,
-  ContactFormComponent,
-  SectionComponent,
-  HeroComponent,
-  MapsComponent,
-  CookiesComponent,
-];
-@NgModule({
-  declarations: [
-    ...declarables,
+    FooterComponent,
+    NavbarComponent,
+    LayoutComponent,
+    LayoutBreadcrumbsComponent,
+    OurSocialMediaComponent,
+    ContactFormComponent,
+    SectionComponent,
+    HeroComponent,
+    MapsComponent,
     FooterSocialComponent,
     FooterSiteInfoComponent,
     FooterMainComponent,
     BreadcrumbsComponent,
     WhatsappFixedComponent,
-    SectionComponent,
-    MapsComponent,
-    CookiesComponent,
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    FontAwesomeModule,
-    NgOptimizedImage,
-    ReactiveFormsModule,
-    RouterLink,
-    GoogleMapsModule,
-    HttpClientModule,
-    FormsModule,
-    NgcCookieConsentModule,
-  ],
-  exports: [declarables],
+];
+@NgModule({
+    declarations: [...declarables],
+    imports: [
+        CommonModule,
+        MaterialModule,
+        FontAwesomeModule,
+        NgOptimizedImage,
+        ReactiveFormsModule,
+        RouterLink,
+        GoogleMapsModule,
+        HttpClientModule,
+        FormsModule,
+        NgcCookieConsentModule,
+    ],
+    exports: [declarables],
 })
 export class SharedModule {}
