@@ -1,14 +1,19 @@
 import { Component, Input } from '@angular/core';
+import { SectionHeader } from '@core/models/Section';
 
 @Component({
     selector: 'app-header-section',
     template: `
         <header class="header-section">
-            <h4 *ngIf="subtitle" class="header-section__subtitle">
+            <h4
+                *ngIf="header_content.subtitle !== ''"
+                class="header-section__subtitle">
                 {{ subtitle }}
             </h4>
-            <h2 class="header-section__title">{{ title }}</h2>
-            <p class="header-section__paragraph">{{ paragraph }}</p>
+            <h2 class="header-section__title">{{ header_content.title }}</h2>
+            <p class="header-section__paragraph">
+                {{ header_content.paragraph }}
+            </p>
         </header>
     `,
     styles: [
@@ -16,8 +21,10 @@ import { Component, Input } from '@angular/core';
             .header-section {
                 &__title {
                 }
+
                 &__subtitle {
                 }
+
                 &__paragraph {
                 }
             }
@@ -25,9 +32,11 @@ import { Component, Input } from '@angular/core';
     ],
 })
 export class HeaderSectionComponent {
-    @Input() title = '';
-    @Input() subtitle: string | undefined;
-    @Input() paragraph = '';
+    @Input() header_content: SectionHeader = {
+        title: '',
+        subtitle: '',
+        paragraph: '',
+    };
     content = [
         {
             src: 'https://puertasch.com/wp-content/uploads/2021/10/Puerta-interna-nogal-modelo-84003.jpeg',

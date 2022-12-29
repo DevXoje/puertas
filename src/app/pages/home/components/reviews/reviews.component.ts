@@ -3,10 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-reviews',
     template: `
-        <app-header-section
-            [title]="header.title"
-            [paragraph]="header.paragraph">
-        </app-header-section>
+        <app-header-section [header_content]="header"> </app-header-section>
         <mat-grid-list cols="4" rowHeight="800px">
             <mat-grid-tile *ngFor="let item of content">
                 <mat-card class="mat-elevation-z4">
