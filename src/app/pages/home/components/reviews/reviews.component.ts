@@ -3,16 +3,10 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-reviews',
     template: `
-        <header>
-            <h2>Nuestros últimos trabajos</h2>
-            <p>
-                Le invitamos a que nos conozca nuestra web para ver nuestro
-                catálogo de productos que incluye una amplia variedad de puertas
-                de exterior, puertas de interior, suelos laminados, tarimas
-                flotantes de madera natural, armarios empotrados (frentes e
-                interiores), vestidores a medida y ventanas.
-            </p>
-        </header>
+        <app-header-section
+            [title]="header.title"
+            [paragraph]="header.paragraph">
+        </app-header-section>
         <mat-grid-list cols="4" rowHeight="800px">
             <mat-grid-tile *ngFor="let item of content">
                 <mat-card class="mat-elevation-z4">
@@ -45,6 +39,11 @@ import { Component } from '@angular/core';
     ],
 })
 export class ReviewsComponent {
+    header = {
+        title: 'Nuestros últimos trabajos',
+        paragraph:
+            'Le invitamos a que nos conozca nuestra web para ver nuestro catálogo de productos que incluye una amplia variedad de puertas de exterior, puertas de interior, suelos laminados, tarimas flotantes de madera natural, armarios empotrados (frentes e interiores), vestidores a medida y ventanas.',
+    };
     content = [
         {
             src: 'https://puertasch.com/wp-content/uploads/2021/10/Puerta-interna-nogal-modelo-84003.jpeg',
