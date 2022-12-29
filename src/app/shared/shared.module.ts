@@ -21,6 +21,7 @@ import { MapsComponent } from './components/maps/maps.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 import { NgcCookieConsentModule } from 'ngx-cookieconsent';
+import { HeaderSectionComponent } from '@shared/components/header-section/header-section.component';
 
 const declarables = [
     FooterComponent,
@@ -37,6 +38,7 @@ const declarables = [
     FooterMainComponent,
     BreadcrumbsComponent,
     WhatsappFixedComponent,
+    HeaderSectionComponent,
 ];
 @NgModule({
     declarations: [...declarables],
