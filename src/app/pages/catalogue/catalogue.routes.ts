@@ -6,26 +6,26 @@ import { TrabajadosEspecialesComponent } from './containers/trabajados-especiale
 import { ArmariosVestidoresComponent } from './containers/armarios-vestidores/armarios-vestidores.component';
 
 const catalogueRoutes: Route[] = [
-  {
-    path: '',
-    component: CatalogueComponent,
-  },
-  {
-    path: 'entrada',
-    component: PuertasEntradaExteriorComponent,
-  },
-  {
-    path: 'interior',
-    component: PuertasInteriorComponent,
-  },
-  {
-    path: 'armarios',
-    component: ArmariosVestidoresComponent,
-  },
-  {
-    path: 'especiales',
-    component: TrabajadosEspecialesComponent,
-  },
+    {
+        path: '',
+        component: CatalogueComponent,
+    },
+    {
+        path: 'entrada',
+        component: PuertasEntradaExteriorComponent,
+    },
+    {
+        path: 'interior',
+        component: PuertasInteriorComponent,
+    },
+    {
+        path: 'armarios',
+        component: ArmariosVestidoresComponent,
+    },
+    {
+        path: 'especiales',
+        component: TrabajadosEspecialesComponent,
+    },
 ];
 
 export const CATALOGUE_ROUTES = RouterModule.forChild(catalogueRoutes);

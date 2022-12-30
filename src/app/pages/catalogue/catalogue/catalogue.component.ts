@@ -2,8 +2,21 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-catalogue',
-    templateUrl: './catalogue.component.html',
-    styleUrls: ['./catalogue.component.scss'],
+    template: `
+        <p>small hero</p>
+
+        <div *ngFor="let section of sections">
+            <!--<div *ngFor="let section of sections" [ngStyle]="{'background-image:': section.bg_img}">-->
+            <header>
+                <h2>{{ section.title }}</h2>
+            </header>
+            {{ section.content.main }}
+            <footer>
+                <p>{{ section.content.footer }}</p>
+                <button mat-button>visitar</button>
+            </footer>
+        </div>
+    `,
 })
 export class CatalogueComponent {
     sections = [

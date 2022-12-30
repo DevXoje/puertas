@@ -3,6 +3,7 @@ import { SectionHeader } from '@core/models/Section';
 
 @Component({
     selector: 'app-header-section',
+
     template: `
         <header class="header-section">
             <h4
@@ -13,14 +14,16 @@ import { SectionHeader } from '@core/models/Section';
             <h2 class="header-section__title">
                 {{ header_content.title | uppercase }}
             </h2>
-            <p class="header-section__paragraph">
-                {{ header_content.paragraph }}
-            </p>
+            <p
+                class="header-section__paragraph"
+                *ngFor="let paragraph of header_content.paragraphs"
+                [innerHTML]="paragraph"></p>
         </header>
     `,
     styles: [
         `
             .header-section {
+                text-align: center;
                 &__title {
                 }
 
@@ -37,6 +40,6 @@ export class HeaderSectionComponent {
     @Input() header_content: SectionHeader = {
         title: '',
         subtitle: '',
-        paragraph: '',
+        paragraphs: [''],
     };
 }

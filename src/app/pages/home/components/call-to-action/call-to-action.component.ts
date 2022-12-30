@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
 import { CONTACT_DATA } from '@core/models/static';
+import { SectionHeader } from '@core/models/Section';
 
 @Component({
     selector: 'app-call-to-action',
     template: ` <article class="call-to-action">
-        <header>
-            <h5 class="call-to-action__subtitle">
-                {{ subtitle }}
-            </h5>
-            <h2 class="call-to-action__title">{{ title | titlecase }}</h2>
-            <p class="call-to-action__description">
-                {{ description }}
-            </p>
-        </header>
-        <mat-grid-list cols="2" rowHeight="500px" class="form">
-            <mat-grid-tile rowspan="2" class="form_content">
+        <app-header-section [header_content]="header"></app-header-section>
+        <mat-grid-list class="form" cols="2" rowHeight="500px">
+            <mat-grid-tile class="form_content" rowspan="2">
                 <app-contact-form></app-contact-form>
             </mat-grid-tile>
             <mat-grid-tile class="form_description">
@@ -26,9 +19,9 @@ import { CONTACT_DATA } from '@core/models/static';
                         <h3>{{ form_content.title }}</h3>
                         <div>
                             <button
-                                mat-mini-fab
+                                aria-label="Example icon button with a delete icon"
                                 color="grey"
-                                aria-label="Example icon button with a delete icon">
+                                mat-mini-fab>
                                 <mat-icon
                                     aria-hidden="false"
                                     aria-label="Example home icon"
@@ -68,8 +61,10 @@ import { CONTACT_DATA } from '@core/models/static';
                 .form {
                     mat-grid-list {
                     }
+
                     &_content {
                     }
+
                     &_description {
                     }
                 }
@@ -78,10 +73,14 @@ import { CONTACT_DATA } from '@core/models/static';
     ],
 })
 export class CallToActionComponent {
-    title = 'solicitar presupuestos';
-    subtitle = 'preferimos el contácto personal o telefónico';
-    description =
-        'Si quieres ponerte en contacto preferimos que nos contacte a través de nuestro número de móvil antes que el correo electrónico.';
+    header: SectionHeader = {
+        title: 'solicitar presupuestos',
+        subtitle: 'preferimos el contácto personal o telefónico',
+        paragraphs: [
+            'Si quieres ponerte en contacto preferimos que nos contacte a través de nuestro número de móvil antes que el correo electrónico.',
+        ],
+    };
+
     form_content = {
         content: [
             `Puedes solicitarnos presupuesto a través de este número de teléfono

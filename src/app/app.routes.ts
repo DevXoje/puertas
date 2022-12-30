@@ -1,6 +1,5 @@
 import { Route, RouterModule } from '@angular/router';
 import { ErrorComponent } from './core/components/error.component';
-import { HomeComponent } from './pages/home/home/home.component';
 import { PrivacyPolicyComponent } from './core/components/privacy-policy.component';
 import { EmpresaComponent } from './pages/our-info/our-info/empresa.component';
 import { ContactComponent } from './pages/contact/contact/contact.component';

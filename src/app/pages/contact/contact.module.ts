@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact/contact.component';
@@ -11,18 +11,19 @@ import { SharedModule } from '@shared/shared.module';
 /*import { GoogleMapsModule } from '@angular/google-maps';*/
 
 @NgModule({
-  declarations: [
-    ContactComponent,
-    CallToContactComponent,
-    DoubtsFormComponent,
-    WhereWeAreComponent,
-  ],
-  imports: [
-    CommonModule,
-    ContactRoutingModule,
-    FontAwesomeModule,
-    SharedModule,
-    /*GoogleMapsModule,*/
-  ],
+    declarations: [
+        ContactComponent,
+        CallToContactComponent,
+        DoubtsFormComponent,
+        WhereWeAreComponent,
+    ],
+    imports: [
+        CommonModule,
+        ContactRoutingModule,
+        FontAwesomeModule,
+        SharedModule,
+        NgOptimizedImage,
+        /*GoogleMapsModule,*/
+    ],
 })
 export class ContactModule {}
