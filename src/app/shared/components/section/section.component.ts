@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Tile } from '@core/models/Tile';
-import { HeaderSectionComponent } from '@shared/components/header-section/header-section.component';
 import { SectionHeader } from '@core/models/Section';
 import { Display } from '@core/models/Common';
 
@@ -24,10 +23,10 @@ import { Display } from '@core/models/Common';
         `
             //Todo: Hacer que estos style funcionen. Ahora estan en style.scss
             /* p {
-                font-size: 0.875rem;
-                line-height: 1.7;
-                color: #777777;
-            }*/
+              font-size: 0.875rem;
+              line-height: 1.7;
+              color: #777777;
+          }*/
         `,
     ],
 })
@@ -45,6 +44,7 @@ export class SectionComponent implements OnInit {
         { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
         { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
     ];
+
     ngOnInit() {
         console.log(!!this.content?.nativeElement.innerHTML); // return true if there is a content
         console.log(this.content?.nativeElement.innerHTML);
