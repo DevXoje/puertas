@@ -1,11 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { SectionHeader } from '@core/models/Section';
+import { Display } from '@core/models/Common';
 
 @Component({
     selector: 'app-header-section',
 
     template: `
-        <header class="header-section">
+        <header
+            class="header-section"
+            [ngClass]="{
+                toLeft: display === 'toLeft',
+                toRight: display === 'toRight'
+            }">
             <h4
                 *ngIf="header_content.subtitle !== ''"
                 class="header-section__subtitle">
@@ -23,8 +29,16 @@ import { SectionHeader } from '@core/models/Section';
     styles: [
         `
             .header-section {
-                text-align: center;
+                &.toLeft {
+                    position: absolute;
+                    left: 0;
+                }
+                &.toRight {
+                    position: absolute;
+                    right: 0;
+                }
                 &__title {
+                    font-size: 2rem;
                 }
 
                 &__subtitle {
@@ -37,6 +51,7 @@ import { SectionHeader } from '@core/models/Section';
     ],
 })
 export class HeaderSectionComponent {
+    @Input() display?: Display = 'center';
     @Input() header_content: SectionHeader = {
         title: '',
         subtitle: '',

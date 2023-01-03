@@ -10,14 +10,7 @@ import { SectionHeader } from '@core/models/Section';
         </button>
         <app-who-iam-services></app-who-iam-services>
     `,
-    styles: [
-        `
-            app-who-iam-description {
-                text-align: center;
-                margin: 0 50px;
-            }
-        `,
-    ],
+    styles: [``],
 })
 export class WhoIAmComponent {
     header: SectionHeader = {
