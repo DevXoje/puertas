@@ -27,3 +27,10 @@ app-catalogue{
 		flex-direction: column;
 	}
 }
+.section_content{//Todo: Pasar estos style al component
+	p {
+		font-size: 0.875rem;
+		line-height: 1.7;
+		color: #777777;
+	}
+}
