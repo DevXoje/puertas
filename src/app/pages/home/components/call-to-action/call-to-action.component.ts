@@ -6,7 +6,7 @@ import { SectionHeader } from '@core/models/Section';
     selector: 'app-call-to-action',
     template: ` <article class="call-to-action">
         <app-header-section [header_content]="header"></app-header-section>
-        <mat-grid-list class="form" cols="2" rowHeight="500px">
+        <mat-grid-list class="form" cols="2">
             <mat-grid-tile class="form_content" rowspan="2">
                 <app-contact-form></app-contact-form>
             </mat-grid-tile>

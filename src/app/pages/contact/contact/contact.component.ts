@@ -5,7 +5,7 @@ import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
     selector: 'app-contact',
     template: `
         <app-section>
-            <div class="header">agf</div>
+            <!--<div class="header">agf</div>-->
             <div class="left-place">
                 <figure>
                     <img

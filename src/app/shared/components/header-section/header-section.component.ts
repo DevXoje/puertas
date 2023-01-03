@@ -10,7 +10,8 @@ import { Display } from '@core/models/Common';
             class="header-section"
             [ngClass]="{
                 toLeft: display === 'toLeft',
-                toRight: display === 'toRight'
+                toRight: display === 'toRight',
+                center: display === 'center'
             }">
             <h4
                 *ngIf="header_content.subtitle !== ''"
@@ -36,6 +37,9 @@ import { Display } from '@core/models/Common';
                 &.toRight {
                     position: absolute;
                     right: 0;
+                }
+                &.center {
+                    text-align: center;
                 }
                 &__title {
                     font-size: 2rem;

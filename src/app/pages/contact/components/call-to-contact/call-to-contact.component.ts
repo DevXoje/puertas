@@ -5,19 +5,36 @@ import { CONTACT_DATA } from '@core/models/static';
 @Component({
     selector: 'app-call-to-contact',
     template: `
-        <p>{{ content | uppercase }}</p>
-        <div class="phone">
-            <h3>{{ title }}</h3>
-            <p>{{ phone }}</p>
-        </div>
+        <section class="call-to-contact">
+            <h5 class="call-to-contact__content">{{ content | uppercase }}</h5>
+            <div class="phone">
+                <h3>{{ title }}</h3>
+                <p>{{ phone }}</p>
+            </div>
+        </section>
     `,
     styles: [
         `
+            .call-to-contact {
+                margin-bottom: 100px;
+                &__content {
+                    text-transform: uppercase;
+                    font-size: 0.9375rem;
+                    font-weight: 700;
+                    color: #333333;
+                    line-height: 1.1;
+                    margin-bottom: 15px;
+                }
+            }
             .phone {
                 border-bottom: 4px solid currentColor;
                 border-top: 4px solid currentColor;
                 padding: 4em 0;
                 text-align: center;
+                color: #777777;
+                font-size: 21px;
+                h3 {
+                }
             }
         `,
     ],

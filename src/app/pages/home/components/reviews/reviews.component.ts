@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
     selector: 'app-reviews',
     template: `
         <app-header-section [header_content]="header"></app-header-section>
-        <mat-grid-list cols="4" rowHeight="800px">
+        <mat-grid-list cols="4">
             <mat-grid-tile *ngFor="let item of content">
                 <mat-card class="mat-elevation-z4">
                     <img
