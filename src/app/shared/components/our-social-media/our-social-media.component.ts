@@ -1,17 +1,17 @@
 import { Component, Input } from '@angular/core';
-import {
-    faFacebook,
-    faInstagram,
-    faTelegram,
-    faSkype,
-} from '@fortawesome/free-brands-svg-icons';
-import { SOCIAL_ICONS, TEST } from '@core/models/static';
+
+import { SOCIAL_ICONS } from '@core/models/static';
 
 @Component({
     selector: 'app-our-social-media',
     template: `
         <section class="social-media">
+            <app-header-section
+                [header_content]="{ title: title }"
+                [display]="'toLeft'"></app-header-section>
+            <!--
             <h2 class="social-media__title" [innerHTML]="title"></h2>
+-->
             <ul class="social-media__icons">
                 <li *ngFor="let item of icons">
                     <a

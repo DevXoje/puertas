@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 import { CONTACT_DATA } from '@core/models/static';
 
 @Component({
     selector: 'app-call-to-contact',
     template: `
         <section class="call-to-contact">
-            <h5 class="call-to-contact__content">{{ content | uppercase }}</h5>
+            <h5 class="call-to-contact__content">{{ content }}</h5>
             <div class="phone">
                 <h3>{{ title }}</h3>
                 <p>{{ phone }}</p>
@@ -19,6 +18,7 @@ import { CONTACT_DATA } from '@core/models/static';
                 margin-bottom: 100px;
                 &__content {
                     text-transform: uppercase;
+                    text-align: center;
                     font-size: 0.9375rem;
                     font-weight: 700;
                     color: #333333;

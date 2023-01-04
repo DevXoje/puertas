@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
-import { SCHEDULE } from '@core/models/static';
 
 @Component({
     selector: 'app-contact',
@@ -23,7 +22,6 @@ import { SCHEDULE } from '@core/models/static';
                 </a>
             </div>
         </app-section>
-        <app-hero></app-hero>
         <app-call-to-contact></app-call-to-contact>
         <app-doubts-form></app-doubts-form>
 

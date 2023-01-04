@@ -4,7 +4,8 @@ import { SectionHeader } from '@core/models/Section';
 @Component({
     selector: 'app-where-we-are',
     template: ` <app-header-section
-            [header_content]="header"></app-header-section>
+            [header_content]="header"
+            [display]="'toLeft'"></app-header-section>
 
         <app-maps></app-maps>`,
 })

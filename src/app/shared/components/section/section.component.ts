@@ -1,5 +1,4 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { Tile } from '@core/models/Tile';
 import { SectionHeader } from '@core/models/Section';
 import { Display } from '@core/models/Common';
 
@@ -38,12 +37,6 @@ export class SectionComponent implements OnInit {
         title: '',
     };
     @Input() display?: Display = 'center';
-
-    tiles: Tile[] = [
-        { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
-        { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
-        { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
-    ];
 
     ngOnInit() {
         console.log(!!this.content?.nativeElement.innerHTML); // return true if there is a content

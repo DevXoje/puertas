@@ -55,12 +55,8 @@ import { Image } from '@core/models/image';
                 flex: 1 1 auto;
             }
 
-            mat-toolbar {
-                position: absolute;
-            }
-
             .navbar {
-                position: absolute;
+                position: fixed;
             }
 
             .navbar__inverse {
