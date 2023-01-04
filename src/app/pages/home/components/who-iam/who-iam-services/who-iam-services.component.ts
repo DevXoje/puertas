@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ViewportRuler } from '@angular/cdk/overlay';
 
 @Component({
     selector: 'app-who-iam-services',
@@ -28,12 +29,14 @@ import { Component } from '@angular/core';
         `
             .card {
                 margin-bottom: 150px;
+
                 &__image {
                     /*object-fit: cover;*/
                     width: 100%;
                     height: auto;
                     vertical-align: middle;
                 }
+
                 &__content {
                     margin-top: 20px;
                     font-size: 0.875rem;
@@ -44,7 +47,8 @@ import { Component } from '@angular/core';
         `,
     ],
 })
-export class WhoIAmServicesComponent {
+export class WhoIAmServicesComponent implements OnInit {
+    cols = 0;
     content = [
         {
             img: {
@@ -61,4 +65,25 @@ export class WhoIAmServicesComponent {
             text: 'Proveemos de todo tipo de puertas para el interior de tu hogar y tu negocio. Te aportamos la elegancia que necesites y el estilo que mejor encaja.',
         },
     ];
+
+    constructor(private viewportRuler: ViewportRuler) {
+        this.colsCheck();
+    }
+
+    ngOnInit() {
+        this.viewportRuler.change().subscribe(() => this.colsCheck());
+    }
+
+    colsCheck() {
+        const min_items = 1;
+
+        const width = this.viewportRuler.getViewportSize().width;
+        if (width <= 600) {
+            this.cols = min_items;
+        } else if (width <= 960) {
+            this.cols = min_items + 1;
+        } else {
+            this.cols = min_items + 2;
+        }
+    }
 }

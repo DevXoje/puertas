@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CONTACT_DATA } from '@core/models/static';
 import { SectionHeader } from '@core/models/Section';
+import { ViewportRuler } from '@angular/cdk/overlay';
 
 @Component({
     selector: 'app-call-to-action',
     template: ` <article class="call-to-action">
         <app-header-section [header_content]="header"></app-header-section>
-        <mat-grid-list class="form" cols="2">
-            <mat-grid-tile class="form_content" rowspan="2">
+        <mat-grid-list class="form" [cols]="cols">
+            <mat-grid-tile class="form_content">
                 <app-contact-form></app-contact-form>
             </mat-grid-tile>
             <mat-grid-tile class="form_description">
@@ -41,27 +42,7 @@ import { SectionHeader } from '@core/models/Section';
                 line-height: 1.7;
                 margin-bottom: 60px;
 
-                header {
-                    text-align: center;
-                    &__title {
-                    }
-
-                    &__subtitle {
-                    }
-
-                    &__description {
-                        margin-top: 2.5rem;
-                        word-break: break-word;
-                        word-wrap: break-word;
-                        margin-bottom: 0.9375rem;
-                        margin-top: 0;
-                    }
-                }
-
                 .form {
-                    mat-grid-list {
-                    }
-
                     &_content {
                     }
 
@@ -72,7 +53,8 @@ import { SectionHeader } from '@core/models/Section';
         `,
     ],
 })
-export class CallToActionComponent {
+export class CallToActionComponent implements OnInit {
+    cols = 0;
     header: SectionHeader = {
         title: 'solicitar presupuestos',
         subtitle: 'preferimos el contácto personal o telefónico',
@@ -94,4 +76,24 @@ export class CallToActionComponent {
         title: 'Teléfono de contácto',
     };
     phone = CONTACT_DATA.phone;
+
+    constructor(private viewportRuler: ViewportRuler) {
+        this.colsCheck();
+    }
+
+    ngOnInit() {
+        this.viewportRuler.change().subscribe(() => this.colsCheck());
+    }
+    colsCheck() {
+        const min_items = 1;
+
+        const width = this.viewportRuler.getViewportSize().width;
+        if (width <= 600) {
+            this.cols = min_items;
+        } else if (width <= 960) {
+            this.cols = min_items;
+        } else {
+            this.cols = min_items + 1;
+        }
+    }
 }

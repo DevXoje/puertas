@@ -1,8 +1,8 @@
 import { Route, RouterModule } from '@angular/router';
-import { ErrorComponent } from './core/components/error.component';
-import { PrivacyPolicyComponent } from './core/components/privacy-policy.component';
-import { EmpresaComponent } from './pages/our-info/our-info/empresa.component';
-import { ContactComponent } from './pages/contact/contact/contact.component';
+import { ErrorComponent } from '@core/components/error.component';
+import { PrivacyPolicyComponent } from '@core/components/privacy-policy.component';
+import { EmpresaComponent } from '@pages/our-info/our-info/empresa.component';
+import { ContactComponent } from '@pages/contact/contact/contact.component';
 
 const appRoutes: Route[] = [
     {
@@ -13,12 +13,12 @@ const appRoutes: Route[] = [
     {
         path: 'home',
         loadChildren: () =>
-            import('./pages/home/home.module').then(m => m.HomeModule),
+            import('@pages/home/home.module').then(m => m.HomeModule),
     },
     {
         path: 'catalogue',
         loadChildren: () =>
-            import('./pages/catalogue/catalogue.module').then(
+            import('@pages/catalogue/catalogue.module').then(
                 m => m.CatalogueModule
             ),
     },
@@ -30,19 +30,22 @@ const appRoutes: Route[] = [
     {
         path: 'empresa',
         component: EmpresaComponent,
+        title: 'Quienes Somos',
     },
     {
         path: 'contact',
         component: ContactComponent,
+        title: 'Contacto',
     },
     {
         path: 'terms',
         component: PrivacyPolicyComponent,
+        title: 'Terminos y condiciones',
     },
     {
         path: 'home',
         loadChildren: () =>
-            import('./pages/home/home.module').then(m => m.HomeModule),
+            import('@pages/home/home.module').then(m => m.HomeModule),
     },
     {
         path: '**',
