@@ -14,7 +14,12 @@ export const BRAND_LOGO: Image = {
     width: 87,
     alt: 'algo',
 };
-
+export const SCHEDULE: Image = {
+    path: '/img/horario.jpg',
+    alt: 'algo',
+    height: 1024,
+    width: 878,
+};
 export const SOCIAL_ICONS: Icon[] = [
     {
         path: 'https://www.facebook.com/carlos.h.aparicio.3',

@@ -5,7 +5,7 @@ import { SectionHeader } from '@core/models/Section';
     selector: 'app-reviews',
     template: `
         <app-header-section [header_content]="header"></app-header-section>
-        <mat-grid-list cols="4">
+        <mat-grid-list cols="4" [gutterSize]="'30px'" [rowHeight]="340">
             <mat-grid-tile *ngFor="let item of content">
                 <mat-card class="mat-elevation-z4">
                     <img
@@ -18,19 +18,7 @@ import { SectionHeader } from '@core/models/Section';
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
-        <!--<div class="gallery">
-            <img
-                alt="item.alt"
-                [height]="800"
-                [ngSrc]="item.src"
-                [width]="600"
-                mat-card-image
-                priority
-                *ngFor="let item of content"
-                class="gallery-image" />
-        </div>-->
 
-        <!--algo-->
         <a
             [routerLink]="['catalogue/entrada']"
             class="link-to-entrada"
@@ -39,7 +27,14 @@ import { SectionHeader } from '@core/models/Section';
             Conocer nuestros trabajos
         </a>
     `,
-    // styles: [``],
+    styles: [
+        `
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        `,
+    ],
     styleUrls: ['reviews.component.scss'],
 })
 export class ReviewsComponent {

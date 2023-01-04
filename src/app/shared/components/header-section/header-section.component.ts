@@ -34,21 +34,34 @@ import { Display } from '@core/models/Common';
                     position: absolute;
                     left: 0;
                 }
+
                 &.toRight {
                     position: absolute;
                     right: 0;
                 }
+
                 &.center {
                     text-align: center;
                 }
+
                 &__title {
-                    font-size: 2rem;
+                    font-size: 40px; //2rem
+                    letter-spacing: 3.5px;
+                    color: #333333;
+                    line-height: 1.2;
+                    font-weight: 800;
+                    margin-bottom: 50px;
                 }
 
                 &__subtitle {
                 }
 
                 &__paragraph {
+                    margin-bottom: 0.9375rem;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    line-height: 1.7;
+                    color: #777777;
                 }
             }
         `,

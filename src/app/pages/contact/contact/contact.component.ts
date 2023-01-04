@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
+import { SCHEDULE } from '@core/models/static';
 
 @Component({
     selector: 'app-contact',
@@ -46,7 +47,6 @@ import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
 })
 export class ContactComponent {
     arrowTop = faArrowAltCircleUp;
-
     socialMediaTitle =
         'Puedes contactarnos a través de nuestras Redes Sociales';
 }

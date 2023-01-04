@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SectionHeader } from '@core/models/Section';
 import { Image } from '@core/models/image';
+import { SCHEDULE } from '@core/models/static';
 
 @Component({
     selector: 'app-doubts-form',
@@ -29,10 +30,10 @@ export class DoubtsFormComponent {
     };
     footer =
         ' Siempre tenemos nuestro móvil a mano. Si no te atendemos en el momento es que estamos trabajando duro, no te preocupes, te llamamos nosotros en la mayor brevedad posible.';
-    image: Image = {
+    image: Image = SCHEDULE; /*    image: Image = {
         height: 1024,
         width: 878,
         alt: 'algo',
         path: 'https://puertasch.com/wp-content/uploads/2021/12/Horario2_-878x1024.jpg',
-    };
+    };*/
 }

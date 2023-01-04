@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-who-iam-services',
-    template: ` <mat-grid-list [cols]="content.length">
+    template: ` <mat-grid-list
+        [cols]="content.length"
+        [gutterSize]="'20px'"
+        [rowHeight]="'700px'">
         <mat-grid-tile *ngFor="let item of content">
             <mat-card class="card">
                 <img
@@ -14,7 +17,7 @@ import { Component } from '@angular/core';
                     priority
                     class="card__image" />
                 <mat-card-content>
-                    <p>
+                    <p class="card__content">
                         <strong>{{ item.text }}</strong>
                     </p>
                 </mat-card-content>
@@ -24,8 +27,18 @@ import { Component } from '@angular/core';
     styles: [
         `
             .card {
+                margin-bottom: 150px;
                 &__image {
                     /*object-fit: cover;*/
+                    width: 100%;
+                    height: auto;
+                    vertical-align: middle;
+                }
+                &__content {
+                    margin-top: 20px;
+                    font-size: 0.875rem;
+                    line-height: 1.7;
+                    color: #777777;
                 }
             }
         `,

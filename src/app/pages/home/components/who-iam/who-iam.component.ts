@@ -22,7 +22,7 @@ import { SectionHeader } from '@core/models/Section';
                 text-align: center;
                 margin-bottom: 100px;
                 .btn {
-                    margin: 20px 0 30px 0;
+                    margin: 10px 0 30px 0;
                 }
             }
         `,
