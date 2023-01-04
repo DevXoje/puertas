@@ -42,7 +42,7 @@ import { Component } from '@angular/core';
     styles: [
         `
             .parallax {
-                background-image: url('https://via.placeholder.com/150');
+                background-image: url('../../../../../assets/img/Fachada.jpg');
                 background-attachment: fixed;
                 background-position: center;
                 background-repeat: no-repeat;
