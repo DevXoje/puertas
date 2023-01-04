@@ -15,8 +15,8 @@ export const BRAND_LOGO: Image = {
     alt: 'algo',
 };
 export const SCHEDULE: Image = {
-    path: '/img/horario.jpg',
-    alt: 'algo',
+    path: 'assets/img/Horario.jpg',
+    alt: 'Horario',
     height: 1024,
     width: 878,
 };

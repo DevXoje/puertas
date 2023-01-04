@@ -31,12 +31,12 @@ import { Display } from '@core/models/Common';
         `
             .header-section {
                 &.toLeft {
-                    position: absolute;
+                    position: relative;
                     left: 0;
                 }
 
                 &.toRight {
-                    position: absolute;
+                    position: relative;
                     right: 0;
                 }
 

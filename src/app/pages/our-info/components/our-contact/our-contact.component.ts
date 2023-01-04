@@ -27,13 +27,32 @@ import { Image } from '@core/models/image';
                 <p>telefono de contacto</p>
                 <p>607 85 14 49</p>
             </blockquote>
-            <a mat-fab extended [routerLink]="['/contact']">contacto</a>
+            <a mat-fab extended [routerLink]="['/contact']" class="btn"
+                >contacto</a
+            >
         </section>
     `,
     styles: [
         `
             .our_contact {
                 margin-bottom: 50px;
+                text-align: center;
+
+                .blockquote {
+                    font-size: 1.4em;
+                    margin: 50px auto;
+                    //font-family:Open Sans;
+                    font-style: italic;
+                    color: #999999;
+                    padding: 1.2em 30px;
+                    border-left: 3px solid #03c4eb;
+                    line-height: 1;
+                    position: relative;
+                    background: #ededed;
+                    text-align: left;
+                }
+                .btn {
+                }
             }
             p {
                 font-size: 0.875rem;
@@ -45,18 +64,6 @@ import { Image } from '@core/models/image';
                     display: block;
                     margin: 0 auto;
                 }
-            }
-            .blockquote {
-                font-size: 1.4em;
-                margin: 50px auto;
-                //font-family:Open Sans;
-                font-style: italic;
-                color: #999999;
-                padding: 1.2em 30px;
-                border-left: 3px solid #03c4eb;
-                line-height: 1;
-                position: relative;
-                background: #ededed;
             }
         `,
     ],

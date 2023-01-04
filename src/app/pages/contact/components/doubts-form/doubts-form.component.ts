@@ -6,19 +6,35 @@ import { SCHEDULE } from '@core/models/static';
 @Component({
     selector: 'app-doubts-form',
     template: `
-        <div class="form_doubts">
-            <app-header-section [header_content]="header"></app-header-section>
+        <article class="form_doubts">
+            <app-header-section
+                [header_content]="header"
+                [display]="'toLeft'"></app-header-section>
             <app-contact-form></app-contact-form>
-            <img
-                [ngSrc]="image.path"
-                [width]="image.width"
-                [height]="image.height"
-                [alt]="image.alt" />
+            <figure>
+                <img
+                    [ngSrc]="image.path"
+                    [width]="image.width"
+                    [height]="image.height"
+                    [alt]="image.alt" />
+            </figure>
             <p>
                 {{ footer }}
             </p>
-        </div>
+        </article>
     `,
+    styles: [
+        `
+            .form_doubts {
+                figure {
+                    width: 100%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        `,
+    ],
 })
 export class DoubtsFormComponent {
     header: SectionHeader = {
