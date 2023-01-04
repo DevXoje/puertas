@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SectionHeader } from '@core/models/Section';
 
 @Component({
     selector: 'app-reviews',
@@ -8,27 +9,41 @@ import { Component } from '@angular/core';
             <mat-grid-tile *ngFor="let item of content">
                 <mat-card class="mat-elevation-z4">
                     <img
-                        malt]="item.alt"
+                        alt="item.alt"
                         [height]="800"
                         [ngSrc]="item.src"
                         [width]="600"
-                        [at-card-image
+                        mat-card-image
                         priority />
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
+        <!--<div class="gallery">
+            <img
+                alt="item.alt"
+                [height]="800"
+                [ngSrc]="item.src"
+                [width]="600"
+                mat-card-image
+                priority
+                *ngFor="let item of content"
+                class="gallery-image" />
+        </div>-->
+
+        <!--algo-->
         <a
             [routerLink]="['catalogue/entrada']"
-            mlass="link-to-entrada"
+            class="link-to-entrada"
             color="primary"
-            cat-stroked-button>
+            mat-stroked-button>
             Conocer nuestros trabajos
         </a>
     `,
-    styles: [``],
+    // styles: [``],
+    styleUrls: ['reviews.component.scss'],
 })
 export class ReviewsComponent {
-    header = {
+    header: SectionHeader = {
         title: 'Nuestros últimos trabajos',
         paragraphs: [
             'Le invitamos a que nos conozca nuestra web para ver nuestro catálogo de productos que incluye una amplia variedad de puertas de exterior, puertas de interior, suelos laminados, tarimas flotantes de madera natural, armarios empotrados (frentes e interiores), vestidores a medida y ventanas.',

@@ -5,18 +5,47 @@ import { Component } from '@angular/core';
     template: `
         <p>small hero</p>
 
-        <div *ngFor="let section of sections">
+        <div *ngFor="let section of sections" class="row">
+            <div class="container">
+                <div class="test_box box-01 col-xs-6 col-md-4">
+                    <div class="inner">
+                        <a href="#" class="test_click">
+                            <div class="flex_this">
+                                <header class="test_title">
+                                    <h2>{{ section.title }}</h2>
+                                </header>
+                                {{ section.content.main }}
+                                <footer>
+                                    <p>{{ section.content.footer }}</p>
+                                    <button mat-button class="test_link">
+                                        visitar
+                                    </button>
+                                </footer>
+                                <!--<h1 class="test_title">Title</h1>
+                                    <span class="test_link">Link</span>-->
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
             <!--<div *ngFor="let section of sections" [ngStyle]="{'background-image:': section.bg_img}">-->
-            <header>
-                <h2>{{ section.title }}</h2>
-            </header>
-            {{ section.content.main }}
-            <footer>
-                <p>{{ section.content.footer }}</p>
-                <button mat-button>visitar</button>
-            </footer>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="test_box box-01 col-xs-6 col-md-4">
+                    <div class="inner">
+                        <a href="#" class="test_click">
+                            <div class="flex_this">
+                                <h1 class="test_title">Title</h1>
+                                <span class="test_link">Link</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     `,
+    styleUrls: ['catalogue.component.scss'],
 })
 export class CatalogueComponent {
     sections = [

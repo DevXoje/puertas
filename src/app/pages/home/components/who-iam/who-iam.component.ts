@@ -4,13 +4,29 @@ import { SectionHeader } from '@core/models/Section';
 @Component({
     selector: 'app-who-iam',
     template: `
-        <app-header-section [header_content]="header"></app-header-section>
-        <button mat-raised-button color="warn">
-            <a href="/empresa-puertas-carlos-haro/">Sobre nuestra empresa</a>
-        </button>
-        <app-who-iam-services></app-who-iam-services>
+        <section class="who-iam">
+            <app-header-section [header_content]="header"></app-header-section>
+            <a
+                mat-raised-button
+                color="warn"
+                href="/empresa-puertas-carlos-haro/"
+                class="btn">
+                Sobre nuestra empresa
+            </a>
+            <app-who-iam-services></app-who-iam-services>
+        </section>
     `,
-    styles: [``],
+    styles: [
+        `
+            .who-iam {
+                text-align: center;
+                margin-bottom: 100px;
+                .btn {
+                    margin: 20px 0 30px 0;
+                }
+            }
+        `,
+    ],
 })
 export class WhoIAmComponent {
     header: SectionHeader = {
