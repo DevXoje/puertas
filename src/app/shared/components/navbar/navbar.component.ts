@@ -8,7 +8,7 @@ import { Image } from '@core/models/image';
 @Component({
     selector: 'app-navbar',
     template: `
-        <mat-toolbar color="primary" class="navbar navbar__basic">
+        <mat-toolbar  class="navbar navbar__basic">
             <!--<img
         [width]="logo.width"
         [height]="logo.height"
@@ -57,10 +57,12 @@ import { Image } from '@core/models/image';
 
             .navbar {
                 position: fixed;
+                z-index: 999;
             }
 
             .navbar__inverse {
-                background-color: red;
+                background-color: white;
+                transition: background-color 1s, transform 1s;
             }
 
             .navbar__basic {
