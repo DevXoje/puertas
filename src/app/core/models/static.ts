@@ -80,4 +80,8 @@ export const CONTACT_DATA = {
     phone: '607951449',
     mail: '',
     instagram: '',
+    name: {
+        long: 'Puertas Carlos Haro Aparicio',
+        short: 'Puertas CH',
+    },
 };

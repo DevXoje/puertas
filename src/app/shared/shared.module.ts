@@ -22,6 +22,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { HttpClientModule } from '@angular/common/http';
 import { NgcCookieConsentModule } from 'ngx-cookieconsent';
 import { HeaderSectionComponent } from '@shared/components/header-section/header-section.component';
+import { CoreModule } from '@core/core.module';
 
 const declarables = [
     FooterComponent,
@@ -53,6 +54,7 @@ const declarables = [
         HttpClientModule,
         FormsModule,
         NgcCookieConsentModule,
+        CoreModule,
     ],
     exports: [declarables],
 })

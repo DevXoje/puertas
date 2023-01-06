@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { Image } from '@core/models/image';
+import { CONTACT_DATA } from '@core/models/static';
+import { Link } from '@core/models/Link';
 
 @Component({
     selector: 'app-our-contact',
     template: `
         <section class="our_contact">
-            <p>
-                Si busca algo y no lo encuentra, no lo dude, póngase en contacto
-                con nosotros porque también hacemos trabajos a medida.
-            </p>
+            <p>{{ content[0] }}</p>
             <figure>
                 <img
                     [ngSrc]="image.path"
@@ -16,20 +15,15 @@ import { Image } from '@core/models/image';
                     [width]="image.width"
                     [height]="image.height" />
             </figure>
-            <p>
-                En cualquier caso, le recomendamos que contacte con nosotros
-                para así poderle brindar un trato personalizado. Puede hacerlo a
-                través de nuestro contacto o directamente en:
-            </p>
-
+            <p>{{ content[1] }}</p>
             <hr />
             <blockquote class="blockquote">
-                <p>telefono de contacto</p>
-                <p>607 85 14 49</p>
+                <p>{{ phone.title }}</p>
+                <p>{{ phone.number }}</p>
             </blockquote>
-            <a mat-fab extended [routerLink]="['/contact']" class="btn"
-                >contacto</a
-            >
+            <a mat-fab extended [routerLink]="[contact.path]" class="btn">{{
+                contact.text | titlecase
+            }}</a>
         </section>
     `,
     styles: [
@@ -52,6 +46,7 @@ import { Image } from '@core/models/image';
                     text-align: left;
                 }
                 .btn {
+                    background-color: #32373c;
                 }
             }
             p {
@@ -69,6 +64,18 @@ import { Image } from '@core/models/image';
     ],
 })
 export class OurContactComponent {
+    content = [
+        'Si busca algo y no lo encuentra, no lo dude, póngase en contacto con nosotros porque también hacemos trabajos a medida.',
+        'En cualquier caso, le recomendamos que contacte con nosotros para así poderle brindar un trato personalizado. Puede hacerlo a través de nuestro contacto o directamente en:',
+    ];
+    phone = {
+        title: 'telefono de contacto',
+        number: CONTACT_DATA.phone,
+    };
+    contact: Link = {
+        path: '/contact',
+        text: 'contacto',
+    };
     image: Image = {
         path: 'https://puertasch.com/wp-content/uploads/2021/12/Horario2_-878x1024.jpg',
         alt: 'algo',

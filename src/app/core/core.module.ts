@@ -4,8 +4,13 @@ import { PrivacyPolicyComponent } from './components/privacy-policy.component';
 import { ErrorComponent } from './components/error.component';
 import { NgcCookieConsentModule } from 'ngx-cookieconsent';
 import { COOKIECONFIG } from '@shared/cookieConfig';
+import { OurLogoFooterComponent } from './components/our-logo-footer/our-logo-footer.component';
 
-const declarables = [PrivacyPolicyComponent, ErrorComponent];
+const declarables = [
+    PrivacyPolicyComponent,
+    ErrorComponent,
+    OurLogoFooterComponent,
+];
 
 @NgModule({
     declarations: [...declarables],

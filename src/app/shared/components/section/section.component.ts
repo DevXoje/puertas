@@ -29,7 +29,7 @@ import { Display } from '@core/models/Common';
         `,
     ],
 })
-export class SectionComponent implements OnInit {
+export class SectionComponent {
     @ViewChild('content', { read: ElementRef, static: true })
     content?: ElementRef;
     @Input() isLeftBigger = false;
@@ -37,9 +37,4 @@ export class SectionComponent implements OnInit {
         title: '',
     };
     @Input() display?: Display = 'center';
-
-    ngOnInit() {
-        console.log(!!this.content?.nativeElement.innerHTML); // return true if there is a content
-        console.log(this.content?.nativeElement.innerHTML);
-    }
 }

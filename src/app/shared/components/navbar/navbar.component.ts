@@ -9,7 +9,7 @@ import { NavigationEnd, ResolveEnd, Router } from '@angular/router';
 @Component({
     selector: 'app-navbar',
     template: `
-        <mat-toolbar color="primary" class="navbar navbar__basic">
+        <mat-toolbar class="navbar navbar__basic">
             <!--<img
         [width]="logo.width"
         [height]="logo.height"
@@ -17,12 +17,14 @@ import { NavigationEnd, ResolveEnd, Router } from '@angular/router';
         [alt]="logo.alt" />-->
             <span class="example-spacer"></span>
             <a [routerLink]="['/home']">Home</a>
-            <button
+            <a
+                [routerLink]="['/catalogue']"
                 mat-button
                 [matMenuTriggerFor]="menu"
-                #clickHoverMenuTrigger="matMenuTrigger">
-                <a [routerLink]="['/catalogue']">Nuestro catalogo</a>
-            </button>
+                color="primary"
+                #clickHoverMenuTrigger="matMenuTrigger"
+                >Nuestro catalogo</a
+            >
             <mat-menu #menu="matMenu">
                 <button mat-menu-item *ngFor="let item of sections_catalogue">
                     <a [routerLink]="[item.path]">{{ item.name }}</a>
@@ -42,11 +44,7 @@ import { NavigationEnd, ResolveEnd, Router } from '@angular/router';
     `,
     styles: [
         `
-            .sidenav .mat-toolbar {
-                background: inherit;
-            }
-
-            .mat-toolbar.mat-primary {
+            .mat-toolbar {
                 top: 0;
                 z-index: 1;
             }
@@ -57,14 +55,22 @@ import { NavigationEnd, ResolveEnd, Router } from '@angular/router';
 
             .navbar {
                 position: fixed;
+                * {
+                    color: white;
+                }
             }
 
             .navbar__inverse {
-                background-color: red;
+                background-color: white;
+
+                * {
+                    color: black;
+                }
             }
 
             .navbar__basic {
                 background-color: transparent;
+                color: white;
             }
         `,
     ],

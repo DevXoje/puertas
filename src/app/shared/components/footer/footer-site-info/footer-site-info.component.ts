@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDoubleUp';
+import { Link, LinkList } from '@core/models/Link';
+import { CONTACT_DATA } from '@core/models/static';
 
 @Component({
     selector: 'app-footer-site-info',
@@ -22,21 +24,16 @@ import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDouble
                 </a>
             </div>
             <p>
-                <a href="https://puertasch.com/aviso-legal/">Aviso Legal</a>
-                |
-                <a href="https://puertasch.com/politica-de-privacidad/"
-                    >Política de Privacidad</a
-                >
-                |
-                <a href="https://puertasch.com/politica-de-cookies/"
-                    >Política de cookies</a
-                >
-                2021 Todos los derechos reservados.
+                <ng-container *ngFor="let item of legalLinks">
+                    <a [routerLink]="[item.path]">{{ item.text }}</a>
+                    <ng-container
+                        *ngIf="legalLinks[legalLinks.length - 1] !== item"
+                        >|</ng-container
+                    >
+                </ng-container>
+                {{ currentYear }} Todos los derechos reservados.
             </p>
-            <p>
-                Desarrollado por
-                <a href="">Luque&Vilches</a>
-            </p>
+            <app-our-logo-footer></app-our-logo-footer>
             <p>
                 <!-- <a href="https://intelligentlife.es"
           ><img
@@ -49,7 +46,7 @@ import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDouble
               height="900"
       /></a> -->
 
-                Copyright © 2022 Puertas CH
+                Copyright © {{ currentYear }} {{ company_name.short }}
             </p>
         </div>
     `,
@@ -103,4 +100,20 @@ import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons/faAngleDouble
 })
 export class FooterSiteInfoComponent {
     arrowIcon = faAngleDoubleUp;
+    currentYear: number = new Date().getFullYear();
+    company_name = CONTACT_DATA.name;
+    legalLinks: Link[] = [
+        {
+            text: 'Aviso Legal',
+            path: '/aviso-legal',
+        },
+        {
+            text: 'Política de Privacidad',
+            path: '/politica-de-privacidad',
+        },
+        {
+            text: 'Política de cookies',
+            path: '/politica-de-cookies',
+        },
+    ];
 }

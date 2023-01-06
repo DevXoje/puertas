@@ -67,12 +67,14 @@
 				},
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
+
 					"configurations": {
 						"production": {
 							"browserTarget": "puertas:build:production"
 						},
 						"development": {
-							"browserTarget": "puertas:build:development"
+							"browserTarget": "puertas:build:development",
+							"liveReload": true
 						}
 					},
 					"defaultConfiguration": "development"

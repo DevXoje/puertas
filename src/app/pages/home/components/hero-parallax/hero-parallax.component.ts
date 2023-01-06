@@ -3,11 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-hero-parallax',
     template: `
-        <mat-grid-list
-            cols="1"
-            rowHeight="2:1"
-            class="parallax"
-            style="text-align: center">
+        <mat-grid-list cols="1" class="parallax" rowHeight="100vh">
             <mat-grid-tile>
                 <div>
                     <h1>Puertas CARLOS HARO APARICIO</h1>
@@ -42,6 +38,8 @@ import { Component } from '@angular/core';
     styles: [
         `
             .parallax {
+                text-align: center;
+                color: white;
                 background-image: url('../../../../../assets/img/Fachada.jpg');
                 background-attachment: fixed;
                 background-position: center;
