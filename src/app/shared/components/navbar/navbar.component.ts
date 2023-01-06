@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { BRAND_LOGO } from '@core/models/static';
 import { Image } from '@core/models/image';
+import { NavigationEnd, ResolveEnd, Router } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
@@ -15,7 +16,7 @@ import { Image } from '@core/models/image';
         [ngSrc]="logo.path"
         [alt]="logo.alt" />-->
             <span class="example-spacer"></span>
-            <a href="">Home</a>
+            <a [routerLink]="['/home']">Home</a>
             <button
                 mat-button
                 [matMenuTriggerFor]="menu"
@@ -46,7 +47,6 @@ import { Image } from '@core/models/image';
             }
 
             .mat-toolbar.mat-primary {
-                position: sticky;
                 top: 0;
                 z-index: 1;
             }
@@ -89,8 +89,18 @@ export class NavbarComponent {
             path: 'catalogue/especiales',
         },
     ];
+    inHome = false;
     /* @ViewChild('clickHoverMenuTrigger') clickHoverMenuTrigger?: MatMenuTrigger;*/
-    constructor(private breakpointObserver: BreakpointObserver) {}
+    constructor(
+        private breakpointObserver: BreakpointObserver,
+        private router: Router
+    ) {
+        this.router.events.subscribe((val: any) => {
+            if (val instanceof ResolveEnd) {
+                this.inHome = val.url == '/' || val.url == '/home';
+            }
+        });
+    }
     /*openMenu() {
     this.clickHoverMenuTrigger?.openMenu();
   }
