@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
     faHandDots,
     faCartFlatbedSuitcase,
     faDoorClosed,
 } from '@fortawesome/free-solid-svg-icons';
+import { ViewportRuler } from '@angular/cdk/overlay';
 
 @Component({
     selector: 'app-our-skills',
     template: `
-        <mat-grid-list cols="3" class="card_group">
+        <mat-grid-list [cols]="cols" class="card_group" [rowHeight]="410">
             <mat-grid-tile
                 [colspan]="1"
                 [rowspan]="1"
@@ -45,7 +46,7 @@ import {
             }
             .card {
                 transition: all 0.25s linear;
-                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
                 max-width: 400px;
                 min-width: 200px;
                 min-height: 300px;
@@ -69,7 +70,6 @@ import {
                     margin: 0 0 30px 0;
                     font-weight: bold;
                     line-height: 1.2;
-                    font-size: 23px;
                 }
                 &__content {
                     font-size: 16px;
@@ -91,7 +91,27 @@ import {
         `,
     ],
 })
-export class OurSkillsComponent {
+export class OurSkillsComponent implements OnInit {
+    cols = 0;
+
+    constructor(private viewportRuler: ViewportRuler) {
+        this.colsCheck();
+    }
+    ngOnInit() {
+        this.viewportRuler.change().subscribe(() => this.colsCheck());
+    }
+    colsCheck() {
+        const min_items = 1;
+
+        const width = this.viewportRuler.getViewportSize().width;
+        if (width <= 600) {
+            this.cols = min_items;
+        } else if (width <= 960) {
+            this.cols = min_items + 1;
+        } else {
+            this.cols = min_items + 2;
+        }
+    }
     content = [
         {
             icon: faHandDots,
@@ -102,7 +122,7 @@ export class OurSkillsComponent {
         {
             icon: faCartFlatbedSuitcase,
             title: 'Transporte',
-            description: `Transporte Por tu comodidad te llevamos a tu destino nuestros productos en un "pis pas"`,
+            description: `Por tu comodidad te llevamos a tu destino nuestros productos en un "pis pas"`,
         },
         {
             /* <i class="fa-solid fa-cart-flatbed-suitcase"></i> */
